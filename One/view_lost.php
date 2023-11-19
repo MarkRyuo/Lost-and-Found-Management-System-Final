@@ -1,15 +1,55 @@
 <?php
 // Connection to the database
 include 'db.php';
+?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Items</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+            width: 40vw;
+            height: 5vh;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .claim-button {
+            padding: 5px 10px;
+            font-size: 1.2rem;
+            border: 1px solid black;
+            border-radius: 30px;
+        }
+        
+        .claim-button:hover {
+            background-color: cadetblue;
+        }
+
+    </style>
+</head>
+<body>
+
+<?php
 // Retrieve all the lost items
 $query = "SELECT * FROM lost_items WHERE date_claimed IS NULL";
 $result = mysqli_query($connection, $query);
 
 if ($result) {
     // Display the lost items
-    // Todo : Border here
-    echo "<table border='1'>
+    echo "<table>
         <tr>
             <th>Item Number</th>
             <th>Item Name</th>
@@ -22,7 +62,7 @@ if ($result) {
             <td>" . $row['item_number'] . "</td>
             <td>" . $row['item_name'] . "</td>
             <td>" . $row['date_found'] . "</td>
-            <td><button onclick='claimItem(" . $row['id'] . ")'>Claim</button></td>
+            <td><button class='claim-button' onclick='claimItem(" . $row['id'] . ")'>Claim</button></td>
         </tr>";
     }
 
@@ -31,3 +71,6 @@ if ($result) {
     echo "Error retrieving lost items: " . mysqli_error($connection);
 }
 ?>
+
+</body>
+</html>
