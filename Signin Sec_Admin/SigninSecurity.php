@@ -1,22 +1,13 @@
 <?php
 session_start();
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "db_nt3102";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require_once('db.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
     // Use prepared statements to prevent SQL injection
-    $stmt = $conn->prepare('SELECT * FROM users WHERE username = ? AND password = ?');
+    $stmt = $conn->prepare('SELECT * FROM UserId WHERE username = ? AND password = ?');
     $stmt->bind_param('ss', $username, $password);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -25,15 +16,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = $result->fetch_assoc();
         $_SESSION['username'] = $user['username'];
         $_SESSION['role'] = $user['role'];
-        // Assuming you retrieve Name from the database query
-        $_SESSION['name'] = $user['name'];
+        // Assuming you retrieve full name from the database query
+        $_SESSION['full_name'] = $user['full_name'];
 
 
-        // Redirect based on the user's Role
+        // Redirect based on the user's role
         if ($user['role'] === 'admin') {
-            header('Location: admin_system.php'); //Todo Link here the Location of admin
+            header('Location: admin_system.php');
         } else {
-            header('Location: /User-Profile/userProfile.php'); //Todo Link here the Location of Security
+            header('Location: security_system.php');
         }
         exit;
     } else {
