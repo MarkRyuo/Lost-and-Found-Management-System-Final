@@ -64,9 +64,9 @@ include 'db.php';
           <nav class="parent-Nav">
             <h1><span><i class="fa-solid fa-eye fa-beat-fade"></i></span>Claimed Item</h1>
             <div class="user-button-Log-out">
-              <button id="Logout" class="box btn-color-Logout">
+              <button id="Back" class="box btn-color-Logout">
                 <i class="fa-solid fa-right-from-bracket fa-bounce"></i> <!--This is Bouncing Icon-->
-                Logout  <!--This is Text Logout-->
+                back  <!--This is Text Logout-->
               </button> 
             </div>
           </nav>
