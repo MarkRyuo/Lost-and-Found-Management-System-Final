@@ -1,0 +1,71 @@
+
+
+:root {
+  --bgnav-Color: hsl(343, 79%, 35%);
+  --linkTextcolor: #ffffff;
+  --shadow-nav: hsl(0, 100%, 31%);
+  --hover-Home: #000000;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.navigation {
+  /* border: 1px black solid; */
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: center;
+
+  height: 11vh;
+  width: 100vw;
+  background-color: var(--bgnav-Color);
+  box-shadow: 5px 8px 3px var(--shadow-nav);
+}
+
+
+/* Font awesome icon Home */
+
+.navigation .Home a .fa-solid {
+  font-size: 1.5rem;
+  color: var(--linkTextcolor);
+}
+
+.navigation .Home a .fa-solid:hover {
+  color: var(--hover-Home);
+}
+
+
+/* Font awesome icon Home */
+
+.navigation h1 {
+  color: #ffffff;
+  width: 45vw;
+  text-align: start;
+}
+
+
+/* Section design here */
+
+section {
+  /* border: 1px solid black; */
+  width: 100vw;
+  height: 90vh;
+}
+
+.about-lostandfound {
+  /* border: 1px solid red; */
+  margin: 5rem 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 50vw;
+  height: 60vh;
+  text-align: justify;
+
+}
