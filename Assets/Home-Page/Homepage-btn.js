@@ -6,7 +6,7 @@
 var studentSignin = document.getElementById("studentSignin");
 
 studentSignin.addEventListener("click", function() {
-  window.location.href = "/Student Signin/StudentSignin.php";
+  window.location.href = "/Student/Studentsignin.php";
 });
 
 // securitySignin btn
