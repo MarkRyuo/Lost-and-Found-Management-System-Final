@@ -105,5 +105,6 @@ $fullName = $_SESSION['full_name'];
 
   </main>
 </body>
+  <script src="/assets/Aside-Nav/btn-aside.js"></script>
 </html>
 
