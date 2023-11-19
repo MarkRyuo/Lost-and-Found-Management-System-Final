@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="img/x-icon" href="/assets/Images/Batstatelogo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="/assets/Aside-Nav/Aside.css">
-    <link rel="stylesheet" href="/ReportMissing/Reportmissing.css">
+    <link rel="stylesheet" href="/assets/Aside/Aside.css">
+    <link rel="stylesheet" href="/One/ReportMissing/Reportmissing.css">
     <!-- btn Logout Connection -->
-    <link rel="stylesheet" href="/assets/css/btn-LogoutView.css">
+    <link rel="stylesheet" href="/Assets/css/btn-LogoutView.css">
     <!-- btn save connection -->
-    <link rel="stylesheet" href="/assets/css/btn-save.css">
+    <link rel="stylesheet" href="/Assets/css/btn-save.css">
     <!-- Add CSS for success message -->
     <link rel="stylesheet" href="/ReportMissing/SuccessMessage.css">
     <title>Report Missing Item | Lost and Found </title>
