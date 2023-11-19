@@ -41,22 +41,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="">
+      <link rel="stylesheet" href="/Signin Sec_Admin/SigninSecurity.css">
       <title>Signin Seurity | Lost and Found</title>
   </head>
   <body>
+
+  <div class="container">
+
+    <section class="sec-form">
 
       <form id="loginForm" method="post" class="Form-Signin">
          <h1>Signin</h1>
 
          <label for="username">Username:</label>
-         <input type="text" name="username" required><br>
+         <input type="text" name="username" id="username" required><br>
 
          <label for="password">Password:</label>
-         <input type="password" name="password" required><br>
+         <input type="password" name="password" id="password" required><br>
 
-        <input type="submit" value="Signin">
+        <input type="submit" value="Signin" class="sign-btn">
       </form>
+
+    </section>
+        <div class="blank">
+        </div>
+  </div>
 
   </body>
       <script>
