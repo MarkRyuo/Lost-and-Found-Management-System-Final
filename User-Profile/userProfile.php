@@ -107,7 +107,7 @@ $fullName = $_SESSION['full_name'];
           </button> 
         </div>
         
-      <form class="input" action="/User-Profile/userProfile.php">
+      <form class="input" >
         <h2>Welcome Admin!</h2>
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($username); ?>" readonly>
