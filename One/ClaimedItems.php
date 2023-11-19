@@ -30,9 +30,37 @@ include 'db.php';
           </nav>
         </header>
 
-        <div id="claimedItems">
+        <div class="table-container">
+              <?php
+              // Retrieve all the claimed items
+              $query = "SELECT * FROM lost_items WHERE date_claimed IS NOT NULL";
+              $result = mysqli_query($connection, $query);
 
-        </div>
+              if ($result) {
+                  // Display the claimed items
+                  echo "<table>
+                      <tr>
+                          <th>Item Number</th>
+                          <th>Item Name</th>
+                          <th>Date Found</th>
+                          <th>Date Claimed</th>
+                      </tr>";
+
+                  while ($row = mysqli_fetch_assoc($result)) {
+                      echo "<tr>
+                          <td>" . $row['item_number'] . "</td>
+                          <td>" . $row['item_name'] . "</td>
+                          <td>" . $row['date_found'] . "</td>
+                          <td>" . $row['date_claimed'] . "</td>
+                      </tr>";
+                  }
+
+                  echo "</table>";
+              } else {
+                  echo "Error retrieving claimed items: " . mysqli_error($connection);
+              }
+              ?>
+     </div>
   </main>
   
 </body>
