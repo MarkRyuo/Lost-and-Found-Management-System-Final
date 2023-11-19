@@ -31,7 +31,7 @@ $fullName = $_SESSION['full_name'];
   <!-- Todo  -->
 </aside>
 
-<main class="main-User">
+  <main class="main-User">
     <!-- header here -->
     <header>
       <nav class="parent-Nav">
@@ -57,9 +57,12 @@ $fullName = $_SESSION['full_name'];
         <label for="fullName">Full Name:</label>
         <input type="text" id="fullName" name="fullName" value="<?php echo htmlspecialchars($fullName); ?>" readonly>
 
-        <a href="/This id Final/Register.html">Register</a>
+        <a href="/This id Final/Register.html">Register</a> <!--Todo -->
       </form>
+
     </section>
+
+  </main>
 </body>
 </html>
 
