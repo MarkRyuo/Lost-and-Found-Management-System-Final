@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
         if ($password == $row["password"]) {
             // Login successful, redirect to a new page
-            header("Location: /Student View Lost/ViewlostItemStudent.php"); // Replace with the correct path
+            header("Location: "); // Replace with the correct path // Todo
             exit();
         } else {
             echo "Incorrect password!";
@@ -115,5 +115,5 @@ $conn->close();
 
     </div>
 </body>
-    <script src="/Student Signin/Popup.js"></script>
+    <script src="/Student/Popup.js"></script>
 </html>
