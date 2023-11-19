@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
         if ($password == $row["password"]) {
             // Login successful, redirect to a new page
-            header("Location: /ViewLost/Viewlost.php"); // Replace with the correct path // Todo
+            header("Location: /One/view_lost.php"); // Replace with the correct path // Todo
             exit();
         } else {
             echo "Incorrect password!";
