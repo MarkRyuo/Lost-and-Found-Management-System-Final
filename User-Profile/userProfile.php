@@ -19,7 +19,7 @@ if (!isset($_SESSION['username'])) {
 
 if ($_SESSION['role'] !== 'admin') {
   // Redirect if the user is not an admin
-  header('Location: security_system.php');
+  header('Location: /UserProfile Security/userProfileSecurity.php');
   exit;
 }
 
