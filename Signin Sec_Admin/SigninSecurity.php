@@ -46,11 +46,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </head>
   <body>
 
-      <form id="loginForm" method="post">
+      <form id="loginForm" method="post" class="Form-Signin">
          <h1>Signin</h1>
-          Username: <input type="text" name="username" required><br>
-          Password: <input type="password" name="password" required><br>
-          <input type="submit" value="Signin">
+
+         <label for="username">Username:</label>
+         <input type="text" name="username" required><br>
+
+         <label for="password">Password:</label>
+         <input type="password" name="password" required><br>
+
+        <input type="submit" value="Signin">
       </form>
 
   </body>
