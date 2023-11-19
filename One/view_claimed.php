@@ -8,7 +8,7 @@ $result = mysqli_query($connection, $query);
 
 if ($result) {
     // Display the claimed items
-    echo "<h2>View Claimed Items</h2>";
+    
     echo "<table border='1'>
         <tr>
             <th>Item Number</th>
