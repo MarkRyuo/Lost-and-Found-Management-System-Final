@@ -1,3 +1,8 @@
+<?php
+// Connection to the database
+include 'db.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +14,65 @@
       <link rel="stylesheet" href="/Assets/css/btn-LogoutView.css">
       <link rel="stylesheet" href="/Assets/cssViewLost/style.css">
       <title>Student View Lost | Lost and Found</title>
+      <style>
+
+          :root {
+            --bg-Color: hsl(347, 100%, 98%);
+            --bg-color-Aside: hsl(343, 79%, 36%);
+            --bg-color-Aside-logo: hsl(343, 77%, 20%);
+            --bg-color-Aside-shadow: hsl(343, 78%, 18%);
+          }
+                  
+
+        .table-claim {
+          /* border: 1px solid black; */
+          height: 50vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        /* .main-Conformation {
+          border: 1px solid black;
+        } */
+        .table-container {
+          height: 50vh;
+          overflow-y: auto;
+        }
+
+        table {
+          border-collapse: collapse;
+          width: 70vw;
+          border: 1px solid black;
+        }
+
+        th, td {
+          border: 1px solid var(--bg-color-Aside-shadow);
+          padding: 8px;
+          text-align: center;
+          width: 40vw;
+          height: 8vh;
+          font-size: 1.4rem;
+        }
+
+        th {
+          background-color: var(--bg-color-Aside);
+          color: #fff;
+        }
+
+        .claim-button {
+          padding: 5px 10px;
+          font-size: 1.2rem;
+          border: 1px solid var(--bg-color-Aside);
+          border-radius: 30px;
+          width: 10vw;
+          height: 6vh;
+        }
+
+        .claim-button:hover {
+          background-color: var(--bg-color-Aside);
+          color: #fff;
+        }
+      </style>
   </head>
   <body>
 
