@@ -1,0 +1,99 @@
+/* Import Font Here */
+
+
+:root {
+  --bg-color-nav: hsl(343, 79%, 36%);
+  --bg-Color: hsl(347, 100%, 98%);
+  --bg-color-Aside: hsl(343, 79%, 36%);
+  --bg-color-Aside-logo: hsl(343, 77%, 31%);
+  --bg-color-Aside-shadow: hsl(343, 78%, 18%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-Color);
+}
+
+
+/* main-User*/
+
+.main-User {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1vh;
+  
+  /* border: 1px solid black; */
+  
+  margin-top: 0.5vh;
+  width: 80vw;
+  height: 90vh; 
+}
+
+/* navigation Design */
+.parent-Nav {
+  /* border: 1px solid black; */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  height: 10vh;
+  background-color: var(--bg-color-nav);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: #fff;
+
+}
+
+/* Main and Section Design */
+.parent-User {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 10vh;
+
+  /* border: 1px solid black ; */
+
+  width: 80vw;
+  height: 70vh;
+
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  border: 1px solid black;
+
+  width: 30vw;
+  height: 35vh;
+  gap: 1.5rem;
+}
+
+.input input {
+  width: 14rem;
+  height: 1.5rem;
+}
+
+
+/* user-button-Log-out */
+.user-button-Log-out {
+  margin-top: 2vh;
+  margin-left: auto;
+}
+
+/* fa-user-shield icon */
+
+.fa-user-shield {
+  font-size: 2.5rem; /* Not sure */
+}
