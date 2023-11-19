@@ -187,6 +187,8 @@
     </form>
 </body>
  <script src="/One/script.js"></script>
+ <!-- Connection to aside -->
+ <script src="/Assets/Aside/btn-aside.js"></script>
  <script>
     // Function to hide the success message after a delay
     function hideSuccessMessage() {
