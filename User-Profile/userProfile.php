@@ -124,6 +124,5 @@ $fullName = $_SESSION['full_name'];
 </body>
   <!-- Connection in Home.js -->
   <script src="/assets/js/Logout.js"></script>
-  <script src="/User-Profile/Userprofile.js"></script>
   <script src="/assets/Aside-Nav/btn-aside.js"></script>
 </html>
