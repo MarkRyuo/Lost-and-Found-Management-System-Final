@@ -27,13 +27,37 @@
           </header>
 
           
-          <table class="parent-Table">
+          <div class="table-container">
+            <section class="table-claim">
+                <?php
+                // Retrieve all the lost items
+                $query = "SELECT * FROM lost_items WHERE date_claimed IS NULL";
+                $result = mysqli_query($connection, $query);
 
-            <div id="viewLost">
+                if ($result) {
+                    // Display the lost items
+                    echo "<table>
+                        <tr>
+                            <th>Item Number</th>
+                            <th>Item Name</th>
+                            <th>Date Found</th>
+                        </tr>";
 
-            </div>
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<tr>
+                            <td>" . $row['item_number'] . "</td>
+                            <td>" . $row['item_name'] . "</td>
+                            <td>" . $row['date_found'] . "</td>
+                        </tr>";
+                    }
 
-        </table>
+                    echo "</table>";
+                } else {
+                    echo "Error retrieving lost items: " . mysqli_error($connection);
+                }
+                ?>
+      </section>
+   </div>
 
     </main>
   
