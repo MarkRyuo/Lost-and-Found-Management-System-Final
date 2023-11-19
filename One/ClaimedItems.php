@@ -23,13 +23,14 @@ include 'db.php';
           }
 
         .table-container {
-            height: 50vh;
+            height: 60vh;
             overflow-y: auto;
-            border: 1px solid black;
+            /* border: 1px solid black; */
             width: 100vw;
             display: flex;
             flex-direction: column;
             align-items: center;
+      
         }
 
         table {
@@ -43,10 +44,15 @@ include 'db.php';
             padding: 8px;
             text-align: center;
             width: 25vw;
+            height: 5vh;
+            font-size: 1.3rem;
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: var(--bg-color-Aside);
+            color: #fff;
+            height: 7vh;
+            font-size: 1.3rem;
         }
     </style>
 </head>
