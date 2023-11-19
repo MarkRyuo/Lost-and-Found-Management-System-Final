@@ -14,6 +14,77 @@
     <!-- Add CSS for success message -->
     <link rel="stylesheet" href="/One/ReportMissing/SuccessMessage.js">
     <title>Report Missing Item | Lost and Found </title>
+    <style>
+        :root {
+        --bg-Color: hsl(347, 100%, 98%);
+        --bg-color-Aside: hsl(343, 79%, 36%);
+        --bg-color-Aside-logo: hsl(343, 77%, 31%);
+        --bg-color-Aside-shadow: hsl(343, 78%, 18%);
+        }
+
+        .parent-Report-Missing {
+        /* border: 1px solid black; */
+
+        width: 82vw;
+        height: 93vh;
+        display: flex;
+        flex-direction: column;
+        gap: 15vh;
+
+        margin-top: 1vh;
+        }
+        .report-section {
+        /* border: 1px solid black; */
+
+        width: 80vw;
+        height: 80vh;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2.3vh;
+    }
+
+    .report-section label {
+        margin-right: 15vw;
+        font-size: 1.2rem;
+        color: rgb(93, 93, 93);
+    }
+
+    .report-section button {
+        border: 1px solid var(--bg-color-Aside-shadow);
+        height: 5vh;
+        width: 10vw;
+        border-radius: 30px;
+        font-size: 1.1rem;
+    }
+
+    .report-section .itemnumber {
+        width: 10vw;
+        margin-right: 10vw;
+    }
+
+    .report-section button:hover {
+        background-color: var(--bg-color-Aside);
+        color: #fff;
+        box-shadow: 2px 4px 5px var(--bg-color-Aside-shadow);
+    }
+    
+    .report-section input {
+        font-size: 1.2rem;
+    }
+
+    .success-message {
+        color: green;
+        font-weight: bold;
+        margin-top: 10px;
+        }
+
+    
+    
+    
+    </style>
 </head>
 <body>
 
@@ -72,33 +143,33 @@
             </button> 
           </div>
         </nav>
-
         <?php
-        // Connection to the database (Replace 'db.php' with your actual database connection file)
-        include 'db.php';
+    // Connection to the database (Replace 'db.php' with your actual database connection file)
+    include 'db.php';
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $itemNumber = $_POST["itemNumber"];
-            $itemName = $_POST["itemName"];
-            $dateFound = $_POST["dateFound"];
+    $successMessage = '';
 
-            // Insert the reported lost item into the database
-            $query = "INSERT INTO lost_items (item_number, item_name, date_found) VALUES ('$itemNumber', '$itemName', '$dateFound')";
-            $result = mysqli_query($connection, $query);
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $itemNumber = $_POST["itemNumber"];
+        $itemName = $_POST["itemName"];
+        $dateFound = $_POST["dateFound"];
 
-            // Check if the query was successful
-            if ($result) {
-                echo "Lost item reported successfully";
-            } else {
-                echo "Error reporting lost item: " . mysqli_error($connection);
-            }
+        // Insert the reported lost item into the database
+        $query = "INSERT INTO lost_items (item_number, item_name, date_found) VALUES ('$itemNumber', '$itemName', '$dateFound')";
+        $result = mysqli_query($connection, $query);
+
+        // Check if the query was successful
+        if ($result) {
+            $successMessage = "Lost item reported successfully";
+        } else {
+            $successMessage = "Error reporting lost item: " . mysqli_error($connection);
         }
-        ?>
+    }
+    ?>
 
     <form action="" method="post" class="report-section">
-        <h2>Report Lost Item</h2>
         <label for="itemNumber">Item Number:</label>
-        <input type="text" id="itemNumber" name="itemNumber" required>
+        <input type="text" id="itemNumber" name="itemNumber" class="itemnumber" required>
 
         <label for="itemName">Item Name:</label>
         <input type="text" id="itemName" name="itemName" required>
@@ -111,4 +182,22 @@
 
 </body>
  <script src="/One/script.js"></script>
+<script>
+    // Function to hide the success message after a delay
+    function hideSuccessMessage() {
+        var successMessage = document.querySelector('.success-message');
+        if (successMessage) {
+            setTimeout(function () {
+                successMessage.style.display = 'none';
+            }, 3000); // 3000 milliseconds (3 seconds) delay, you can adjust this value
+        }
+    }
+
+    // Call the function when the page loads
+    window.onload = function () {
+        hideSuccessMessage();
+    };
+</script>
+
+</body>
 </html>

@@ -65,8 +65,8 @@ body {
 
 /* report-section */
 
-.report-section {
-  /* border: 1px solid black; */
+/* .report-section {
+  border: 1px solid black;
 
   width: 80vw;
   height: 60vh;
@@ -76,7 +76,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   gap: 5vh;
-}
+} */
 
 /* Report Missing Input's */
 
