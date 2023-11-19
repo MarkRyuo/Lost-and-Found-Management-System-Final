@@ -15,6 +15,13 @@ include 'db.php';
   <title>Claimed Item | Lost and Found</title>
   <style>
 
+          :root {
+            --bg-Color: hsl(347, 100%, 98%);
+            --bg-color-Aside: hsl(343, 79%, 36%);
+            --bg-color-Aside-logo: hsl(343, 77%, 20%);
+            --bg-color-Aside-shadow: hsl(343, 78%, 18%);
+          }
+
         .table-container {
             height: 50vh;
             overflow-y: auto;
