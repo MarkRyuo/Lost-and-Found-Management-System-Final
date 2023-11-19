@@ -16,11 +16,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = $result->fetch_assoc();
         $_SESSION['username'] = $user['username'];
         $_SESSION['role'] = $user['role'];
-        // Assuming you retrieve full name from the database query
+        // Assuming you retrieve Name from the database query
         $_SESSION['name'] = $user['name'];
 
 
-        // Redirect based on the user's role
+        // Redirect based on the user's Role
         if ($user['role'] === 'admin') {
             header('Location: admin_system.php'); //Todo Link here the Location of admin
         } else {
