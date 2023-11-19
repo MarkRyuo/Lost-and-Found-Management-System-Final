@@ -179,10 +179,9 @@
 
         <button type="submit">Report Lost Item</button>
     </form>
-
 </body>
  <script src="/One/script.js"></script>
-<script>
+ <script>
     // Function to hide the success message after a delay
     function hideSuccessMessage() {
         var successMessage = document.querySelector('.success-message');
@@ -198,6 +197,4 @@
         hideSuccessMessage();
     };
 </script>
-
-</body>
 </html>
