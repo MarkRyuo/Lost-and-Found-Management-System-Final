@@ -103,13 +103,14 @@ $fullName = $_SESSION['full_name'];
         
       <form class="input" >
         <h1>Welcome Admin!</h1>
-        <label for="username" class="fullName">Username:</label>
-        <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($username); ?>" readonly>
 
-        <label for="fullName">Full Name:</label>
+        <label for="fullName" class="fullName">Name:</label>
         <input type="text" id="fullName" name="fullName" value="<?php echo htmlspecialchars($fullName); ?>" readonly>
 
-        <a href="/This id Final/Register.html">Register</a> <!--Todo -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($username); ?>" readonly>
+
+        <a href="/This id Final/Register.html">Register a security?</a> <!--Todo -->
       </form>
 
     </section>

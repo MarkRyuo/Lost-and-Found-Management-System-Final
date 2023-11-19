@@ -117,3 +117,14 @@ body {
 .input .fullName {
   margin-right: 17.5vw;
 }
+
+.input a {
+  font-size: 1.2rem;
+  color: var(--bg-color-Aside-shadow);
+  text-decoration: none;
+}
+
+.input a:hover {
+  color: blue;
+  text-decoration:underline;
+}
