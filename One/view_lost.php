@@ -8,7 +8,7 @@ $result = mysqli_query($connection, $query);
 
 if ($result) {
     // Display the lost items
-    
+    // Todo : Border here
     echo "<table border='1'>
         <tr>
             <th>Item Number</th>
