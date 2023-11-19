@@ -144,28 +144,40 @@
           </div>
         </nav>
         <?php
-    // Connection to the database (Replace 'db.php' with your actual database connection file)
-    include 'db.php';
+// Connection to the database (Replace 'db.php' with your actual database connection file)
+include 'db.php';
 
-    $successMessage = '';
+$successMessage = '';
+$itemNumber = '';
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $itemNumber = $_POST["itemNumber"];
-        $itemName = $_POST["itemName"];
-        $dateFound = $_POST["dateFound"];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $itemName = $_POST["itemName"];
+    $dateFound = $_POST["dateFound"];
 
-        // Insert the reported lost item into the database
-        $query = "INSERT INTO lost_items (item_number, item_name, date_found) VALUES ('$itemNumber', '$itemName', '$dateFound')";
-        $result = mysqli_query($connection, $query);
+    // Get the latest item number from the database
+    $latestItemQuery = "SELECT MAX(CAST(SUBSTRING(item_number, 4) AS UNSIGNED)) AS max_item_number FROM lost_items";
+    $result = mysqli_query($connection, $latestItemQuery);
 
-        // Check if the query was successful
-        if ($result) {
-            $successMessage = "Lost item reported successfully";
-        } else {
-            $successMessage = "Error reporting lost item: " . mysqli_error($connection);
-        }
+    if ($result) {
+        $row = mysqli_fetch_assoc($result);
+        $maxItemNumber = $row['max_item_number'];
+
+        // Increment the item number and format with leading zeros
+        $itemNumber = sprintf('%06d', $maxItemNumber + 1);
     }
-    ?>
+
+    // Insert the reported lost item into the database
+    $query = "INSERT INTO lost_items (item_number, item_name, date_found) VALUES ('$itemNumber', '$itemName', '$dateFound')";
+    $result = mysqli_query($connection, $query);
+
+    // Check if the query was successful
+    if ($result) {
+        $successMessage = "Lost item reported successfully";
+    } else {
+        $successMessage = "Error reporting lost item: " . mysqli_error($connection);
+    }
+}
+?>
     <!-- Todo nagdodouble ang data kapag nirereload -->
 
     <form action="" method="post" class="report-section">
@@ -175,7 +187,7 @@
             }
         ?>
         <label for="itemNumber">Item Number:</label>
-        <input type="text" id="itemNumber" name="itemNumber" class="itemnumber" required>
+        <input type="text" id="itemNumber" name="itemNumber" class="itemnumber" value="<?php echo $itemNumber; ?>" readonly>
 
         <label for="itemName">Item Name:</label>
         <input type="text" id="itemName" name="itemName" required>
@@ -205,4 +217,5 @@
         hideSuccessMessage();
     };
 </script>
+<script src="/Assets/js/Logout.js"></script>
 </html>
