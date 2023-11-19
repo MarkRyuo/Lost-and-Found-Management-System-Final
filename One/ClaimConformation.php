@@ -1,3 +1,8 @@
+<?php
+// Connection to the database
+include 'db.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,6 +23,65 @@
               <!-- btn Claim Connection -->
       <link rel="stylesheet" href="/ClaimConformation/claim-btn-conformation.css">
       <title>Claim Conformation | Lost and Found</title>
+      <style>
+
+          :root {
+            --bg-Color: hsl(347, 100%, 98%);
+            --bg-color-Aside: hsl(343, 79%, 36%);
+            --bg-color-Aside-logo: hsl(343, 77%, 20%);
+            --bg-color-Aside-shadow: hsl(343, 78%, 18%);
+          }
+                  
+
+        .table-claim {
+          /* border: 1px solid black; */
+          height: 50vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .main-Conformation {
+          /* border: 1px solid black; */
+        }
+        .table-container {
+          height: 50vh;
+          overflow-y: auto;
+        }
+
+        table {
+          border-collapse: collapse;
+          width: 70vw;
+          border: 1px solid black;
+        }
+
+        th, td {
+          border: 1px solid var(--bg-color-Aside-shadow);
+          padding: 8px;
+          text-align: center;
+          width: 40vw;
+          height: 8vh;
+          font-size: 1.4rem;
+        }
+
+        th {
+          background-color: var(--bg-color-Aside);
+          color: #fff;
+        }
+
+        .claim-button {
+          padding: 5px 10px;
+          font-size: 1.2rem;
+          border: 1px solid var(--bg-color-Aside);
+          border-radius: 30px;
+          width: 10vw;
+          height: 6vh;
+        }
+
+        .claim-button:hover {
+          background-color: var(--bg-color-Aside);
+          color: #fff;
+        }
+      </style>
   </head>
   <body>
 
@@ -79,12 +143,42 @@
             </div>
         </nav>
 
-          <div id="viewLost" style="border: 1px solid black;">
+        <div class="table-container">
+            <section class="table-claim">
+                <?php
+                // Retrieve all the lost items
+                $query = "SELECT * FROM lost_items WHERE date_claimed IS NULL";
+                $result = mysqli_query($connection, $query);
 
-          </div>
+                if ($result) {
+                    // Display the lost items
+                    echo "<table>
+                        <tr>
+                            <th>Item Number</th>
+                            <th>Item Name</th>
+                            <th>Date Found</th>
+                            <th>Claim</th>
+                        </tr>";
 
-      </main>
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<tr>
+                            <td>" . $row['item_number'] . "</td>
+                            <td>" . $row['item_name'] . "</td>
+                            <td>" . $row['date_found'] . "</td>
+                            <td><button class='claim-button' onclick='claimItem(" . $row['id'] . ")'>Claim</button></td>
+                        </tr>";
+                    }
+
+                    echo "</table>";
+                } else {
+                    echo "Error retrieving lost items: " . mysqli_error($connection);
+                }
+                ?>
+      </section>
+   </div>
+ </main>
   
 </body>
   <script src="/Assets/js/script.js"></script>
+  
 </html>

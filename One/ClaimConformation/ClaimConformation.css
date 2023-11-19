@@ -16,7 +16,7 @@ body {
 }
 
 .main-Conformation {
-  /* border: 1px solid black; */
+  border: 1px solid black;
 
   height: 95vh;
   width: 82vw;
@@ -98,30 +98,33 @@ body {
 
 }
 
-.table-Header th {
-  /* border: 1px solid black; */
+/* .table-Header th {
+  border: 1px solid black;
 
   width: 20vw;
   height: 5vh;
-}
+} */
 
-.sec-Table .table-Header th {
+/* .sec-Table .table-Header th {
   background-color: var(--bg-color-Aside);
   color: #fff;
-}
+} */
 
-.sec-Table tr input {
+/* .sec-Table tr input {
 
   width: 20vw;
   height: 5vh;
-}
+} */
 
-.sec-Table td .button-claim {
+/* .sec-Table td .button-claim {
 
   width: 5vw;
   height: 5vh;
 
   border-radius: 15px;
-}
+} */
 
 
+
+
+/*  */
