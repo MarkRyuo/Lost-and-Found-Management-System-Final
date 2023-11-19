@@ -1,0 +1,79 @@
+/* Import Font Here */
+
+
+
+:root {
+  --bg-Color: hsl(347, 100%, 98%);
+  --bg-color-Aside: hsl(343, 79%, 36%);
+  --bg-color-Aside-logo: hsl(343, 77%, 31%);
+  --bg-color-Aside-shadow: hsl(343, 78%, 18%);
+}
+
+#popup {
+  display: block; 
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  padding: 20px; 
+  background-color: var(--bg-Color); 
+  border: 1px solid #d4d4d4; 
+  border-radius: 5px; text-align: center;
+  width: 50vw;
+  height: 60vh;
+}
+
+
+
+
+.sec-popup {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+
+  height: 55vh;
+
+  gap: 1vw;
+}
+
+/* text-popup*/
+
+.text-popup {
+  /* border: 1px solid black; */
+
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* .img-box */
+
+.img-box {
+  /* border: 1px solid black; */
+  
+  display: flex;
+  align-items: center;
+
+  
+}
+
+/* btnpopup */
+
+#btnpopup {
+  width: 15vw;
+  height: 5vh;
+}
+
+
+
+/* text-popup text */
+
+.text-popup h1 {
+  font-size: 2.8rem;
+}
+
+.text-popup p {
+  font-size: 1.5rem;
+}

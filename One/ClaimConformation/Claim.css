@@ -1,0 +1,11 @@
+
+
+
+tr , th {
+  width: 40vw;
+  height: 5vh;
+}
+
+tr td {
+  text-align: center;
+}

@@ -11,19 +11,19 @@ User.addEventListener("click", function() {
 var viewlostItem = document.getElementById("viewlostItem");
 
 viewlostItem.addEventListener("click", function() {
-  window.location.href = "/View Lost Item/ViewlostItem.html";
+  window.location.href = "/One/view_lost.php";
 });
 
 // code for reportMissing
 var reportMissing = document.getElementById("reportMissing");
 
 reportMissing.addEventListener("click", function() {
-  window.location.href = "/ReportMissing/ReportMissing.php";
+  window.location.href = "/One/report_lostitem.php";
 });
 
 // code for claimConformation
 var rclaimConformation = document.getElementById("claimConformation");
 
 claimConformation.addEventListener("click", function() {
-  window.location.href = "/ClaimConformation/ClaimConformation.html";
+  window.location.href = "/One/ClaimConformation.php";
 });
