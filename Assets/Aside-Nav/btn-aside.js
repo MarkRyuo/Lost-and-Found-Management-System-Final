@@ -4,7 +4,7 @@
 var User = document.getElementById("User");
 
 User.addEventListener("click", function() {
-  window.location.href = "/User-Profile/userProfile.html";
+  window.location.href = "/User-Profile/userProfile.php";
 });
 
 // code for viewlostItem
