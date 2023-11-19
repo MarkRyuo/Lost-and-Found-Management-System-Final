@@ -8,6 +8,6 @@ Back.addEventListener("click", function() {
   
   // If the user confirms, redirect to "/index.html"
   if (confirmLogout) {
-    window.location.href = "/ViewLost_Student/StudertViewLost.php";
+    window.location.href = "/User-Profile/userProfile.php";
   }
 });
