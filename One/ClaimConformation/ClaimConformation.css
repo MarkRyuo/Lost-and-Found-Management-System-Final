@@ -1,0 +1,127 @@
+/* Import Font Here */
+
+:root {
+  --bg-Color: hsl(347, 100%, 98%);
+  --bg-color-Aside: hsl(343, 79%, 36%);
+  --bg-color-Aside-logo: hsl(343, 77%, 31%);
+  --bg-color-Aside-shadow: hsl(343, 78%, 18%);
+}
+
+body {
+  display: flex;
+  background-color: var(--bg-Color);
+
+  gap: 3vh;
+
+}
+
+.main-Conformation {
+  /* border: 1px solid black; */
+
+  height: 95vh;
+  width: 82vw;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15vh;
+
+  margin-top: 0.7vh;
+
+
+}
+
+/* report-missing */
+
+.nav-Conformation {
+  /* border: 1px solid black; */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  height: 10vh;
+
+  background-color: var(--bg-color-Aside);
+  color: #fff;
+
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+}
+
+/* div-conformation */
+
+.div-conformation {
+  /* border: 1px solid black; */
+
+  display: flex;
+  width: 14vw;
+  gap: 0.9vw;
+}
+
+/* table-Section */
+/* .table-Section {
+  border: 1px solid black;
+
+  width: 80vw;
+  height: 40vh;
+  
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+
+} */
+
+/* .sec-table {
+  border: 1px solid black;
+
+  width: 27vw;
+  height: 12vh;
+  
+} */
+
+
+/* Design for Table's */
+.sec-Table {
+  /* border: 1px solid black; */
+  /* border-radius: 20px; */
+
+  height: 50vh;
+  width: 80vw;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+
+}
+
+.table-Header th {
+  /* border: 1px solid black; */
+
+  width: 20vw;
+  height: 5vh;
+}
+
+.sec-Table .table-Header th {
+  background-color: var(--bg-color-Aside);
+  color: #fff;
+}
+
+.sec-Table tr input {
+
+  width: 20vw;
+  height: 5vh;
+}
+
+.sec-Table td .button-claim {
+
+  width: 5vw;
+  height: 5vh;
+
+  border-radius: 15px;
+}
+
+
