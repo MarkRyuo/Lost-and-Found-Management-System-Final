@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('db.php'); // Include the database connection file
+require_once('Database.php'); // Include the database connection file
 
 if (!isset($_SESSION['username'])) {
     header('Location: index.html');
