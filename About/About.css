@@ -1,13 +1,16 @@
 
-
 :root {
   --bgnav-Color: hsl(343, 79%, 35%);
   --linkTextcolor: #ffffff;
   --shadow-nav: hsl(0, 100%, 31%);
   --hover-Home: #000000;
+  --bg-Color: hsl(347, 100%, 98%);
 }
 
 
+body {
+ background-color: var(--bg-Color);
+}
 * {
   margin: 0;
   padding: 0;
