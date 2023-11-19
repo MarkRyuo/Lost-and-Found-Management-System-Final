@@ -19,7 +19,7 @@ if (!isset($_SESSION['username'])) {
 
 if ($_SESSION['role'] !== 'admin') {
   // Redirect if the user is not an admin
-  header('Location: security_system.php');
+  header('Location: /UserProfile Security/userProfileSecurity.php');
   exit;
 }
 
@@ -102,7 +102,7 @@ $fullName = $_SESSION['full_name'];
         </div>
         
       <form class="input" >
-        <h1>Welcome Admin!</h1>
+        <h1>Welcome Security</h1>
 
         <label for="fullName" class="fullName">Name:</label>
         <input type="text" id="fullName" name="fullName" value="<?php echo htmlspecialchars($fullName); ?>" readonly>
