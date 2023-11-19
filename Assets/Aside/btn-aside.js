@@ -25,5 +25,5 @@ reportMissing.addEventListener("click", function() {
 var rclaimConformation = document.getElementById("claimConformation");
 
 claimConformation.addEventListener("click", function() {
-  window.location.href = "/ClaimConformation/ClaimConformation.html";
+  window.location.href = "/One/ClaimConformation.php";
 });
