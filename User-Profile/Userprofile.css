@@ -78,14 +78,14 @@ body {
   
   border: 1px solid black;
 
-  width: 30vw;
-  height: 35vh;
+  width: 40vw;
+  height: 50vh;
   gap: 1.5rem;
 }
 
 .input input {
-  width: 14rem;
-  height: 1.5rem;
+  width: 17rem;
+  height: 1.9rem;
 }
 
 
