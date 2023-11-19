@@ -36,6 +36,14 @@ $fullName = $_SESSION['full_name'];
     <link rel="stylesheet" href="/User-Profile/Userprofile.css">
     <link rel="stylesheet" href="/assets/css/btn-aboutandlogout.css">
     <title>User Profile | Lost and Found</title>
+    <style>
+        body {
+            display: flex;
+            background-color: var(--bg-Color);
+
+            gap: 1.3vw;
+        }
+    </style>
 </head>
 <body>
 
