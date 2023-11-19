@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($user['role'] === 'admin') {
             header('Location: admin_system.php'); //Todo Link here the Location of admin
         } else {
-            header('Location: security_system.php'); //Todo Link here the Location of Security
+            header('Location: /User-Profile/userProfile.php'); //Todo Link here the Location of Security
         }
         exit;
     } else {
