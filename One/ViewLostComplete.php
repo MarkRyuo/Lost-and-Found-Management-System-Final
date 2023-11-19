@@ -22,7 +22,7 @@ include 'db.php';
       <link rel="stylesheet" href="/assets/css/btn-LogoutView.css">
               <!-- btn Claim Connection -->
       <link rel="stylesheet" href="/ClaimConformation/claim-btn-conformation.css">
-      <title>Claim Conformation | Lost and Found</title>
+      <title>View Lost Item | Lost and Found</title>
       <style>
 
           :root {
@@ -40,9 +40,7 @@ include 'db.php';
           flex-direction: column;
           align-items: center;
         }
-        /* .main-Conformation {
-          border: 1px solid black;
-        } */
+
         .table-container {
           height: 50vh;
           overflow-y: auto;
@@ -132,7 +130,7 @@ include 'db.php';
         <nav class="nav-Conformation">
           <div class="div-conformation">
             <span> <i class="fa-solid fa-square-check fa-bounce"></i></span>
-            <h1>Claim Conformation</h1>
+            <h1>View Lost Item</h1>
           </div>
 
             <div class="user-button-Log-out">
