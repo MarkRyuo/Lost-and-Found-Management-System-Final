@@ -46,6 +46,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </head>
   <body>
 
+  <div class="container">
+
+    <section class="sec-form">
+
       <form id="loginForm" method="post" class="Form-Signin">
          <h1>Signin</h1>
 
@@ -57,6 +61,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <input type="submit" value="Signin">
       </form>
+
+    </section>
+        <div class="blank">
+        </div>
+  </div>
 
   </body>
       <script>
