@@ -182,4 +182,6 @@ include 'db.php';
   <script src="/Assets/js/script.js"></script>
   <!-- Connection for Aside -->
   <script src="/Assets/Aside/btn-aside.js"></script>
+  <!-- Connection in Logout -->
+  <script src="/Assets/js/Logout.js"></script>
 </html>
