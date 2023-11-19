@@ -40,9 +40,8 @@ include 'db.php';
           flex-direction: column;
           align-items: center;
         }
-        /* .main-Conformation {
-          border: 1px solid black;
-        } */
+       
+        
         .table-container {
           height: 50vh;
           overflow-y: auto;
