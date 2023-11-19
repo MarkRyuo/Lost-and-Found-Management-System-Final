@@ -13,6 +13,35 @@ include 'db.php';
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="/Assets/css/btn-LogoutView.css">
   <title>Claimed Item | Lost and Found</title>
+  <style>
+
+        .table-container {
+            height: 50vh;
+            overflow-y: auto;
+            border: 1px solid black;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 70vw;
+            border: 1px solid black;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+            width: 25vw;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
 

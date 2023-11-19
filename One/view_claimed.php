@@ -17,7 +17,7 @@ include 'db.php';
 
         table {
             border-collapse: collapse;
-            width: 70vw;
+            width: 90vw;
             border: 1px solid black;
         }
 
