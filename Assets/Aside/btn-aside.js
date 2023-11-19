@@ -11,7 +11,7 @@ User.addEventListener("click", function() {
 var viewlostItem = document.getElementById("viewlostItem");
 
 viewlostItem.addEventListener("click", function() {
-  window.location.href = "/One/view_lost.php";
+  window.location.href = "/One/ViewLostComplete.php";
 });
 
 // code for reportMissing
