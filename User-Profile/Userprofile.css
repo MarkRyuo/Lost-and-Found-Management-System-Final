@@ -60,7 +60,7 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
-  gap: 10vh;
+  gap: 5vh;
 
   /* border: 1px solid black ; */
 
@@ -76,10 +76,11 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   
-  border: 1px solid black;
+  border: 1px solid var(--bg-color-Aside);
+  box-shadow: 2px 2px 2px var(--bg-color-Aside-shadow);
 
-  width: 40vw;
-  height: 50vh;
+  width: 30vw;
+  height: 55vh;
   gap: 1.5rem;
 }
 
@@ -87,6 +88,7 @@ body {
   width: 20vw;
   height: 5vh;
   font-size: 1.3rem;
+  border-radius: 20px;
 }
 
 
@@ -103,5 +105,14 @@ body {
 }
 
 .input h1 {
-  font-size: 1.5rem;
+  font-size: 3rem;
+}
+
+.input label {
+  font-size: 1.2rem;
+  margin-right: 16vw;
+}
+
+.input .fullName {
+  margin-right: 17.5vw;
 }

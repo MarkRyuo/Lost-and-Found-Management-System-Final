@@ -81,11 +81,12 @@
         
       <form class="input" action="/User-Profile/userProfile.php">
         <h1>Welcome Admin!</h1>
+
+        <label for="fullName" class="fullName">Name:</label>
+        <input type="text" id="fullName" name="fullName" value="<?php echo htmlspecialchars($fullName); ?>" readonly>
+
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($username); ?>" readonly>
-
-        <label for="fullName">Full Name:</label>
-        <input type="text" id="fullName" name="fullName" value="<?php echo htmlspecialchars($fullName); ?>" readonly>
 
         <a href="/This id Final/Register.html">Register</a> <!--Todo -->
       </form>
