@@ -1,6 +1,14 @@
 <?php
-session_start();
-require_once('Database.php'); // Include the database connection file
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "db_nt3102";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 if (!isset($_SESSION['username'])) {
     header('Location: userProfile.html');
