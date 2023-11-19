@@ -1,0 +1,144 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Font Link's */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap");
+
+:root {
+  --box-Color: hsl(347, 100%, 98%);
+  --b-Color: hsl(343, 76%, 25%);
+  --color: #333;
+  --text-Color: hsl(342, 73%, 7%);
+}
+
+/* html{
+  scroll-behavior: smooth;
+} */
+
+body {
+  font-family: "Red Hat Text", sans-serif;
+}
+
+.container {
+  /* border: 1px solid black; */
+
+  text-align: center;
+  color: var(--color);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+  background-image: url(/assets/Images/Bsu\ site.jpg);
+  background-size: cover;
+  background-position: center;
+
+  /*  this is where the magic happens:  */
+  background-attachment: fixed;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 4rem;
+  color: var(--text-Color);
+}
+
+p {
+  max-width: 52ch;
+  line-height: 1.5;
+  padding: 1em;
+  font-size: 1rem;
+}
+
+.con-Text {
+  font-size: 2.2rem;
+}
+
+a {
+  display: inline-block;
+  padding: 1em 3.5em;
+  background-color: var(--color);
+  color: #ffffff;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  border-radius: 0.3em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 0.875rem;
+}
+
+.blank,
+.other {
+  width: 100%;
+  min-height: 60vh;
+  background-color: var(--b-Color);
+}
+
+.second {
+  /* border: 1px solid black; */
+
+  background-image: url(/assets/Images/Bsu_Lipa.jpg);
+  background-attachment: fixed;
+  height: 1200px;
+  /* width: 100vw; */
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-top: 1em;
+}
+
+.card > a {
+  margin-bottom: 2em;
+}
+
+.item {
+  display: flex;
+  /* border: 1px solid black; */
+  height: 50vh;
+  max-width: 320px;
+  background-color: var(--box-Color);
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1em;
+  -webkit-box-shadow: 0px 29px 38px -15px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 0px 29px 38px -15px rgba(0, 0, 0, 0.43);
+  box-shadow: 0px 29px 38px -15px rgba(0, 0, 0, 0.43);
+}
+
+.img {
+  width: 90%;
+  height: 200px;
+  background-color: var(--box-Color);
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 20px;
+  border-radius: 0.3em;
+}
+
+.img-first {
+  background-image: url(/assets/Images/Batstatelogo.png);
+}
+
+.img-second {
+  background-image: url(/assets/Images/Batstatelogo.png);
+}
+
+.img-third {
+  background-image: url(/assets/Images/Batstatelogo.png);
+}
+
+.second {
+  flex-direction: row;
+  gap: 1.6em;
+}
