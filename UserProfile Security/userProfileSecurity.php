@@ -109,9 +109,6 @@ $fullName = $_SESSION['full_name'];
 
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($username); ?>" readonly>
-
-        <a href="#">Register a security?</a> <!--Todo -->
-        <a href="/One/ClaimedItems.php">View Claimed Item</a>
       </form>
 
     </section>
