@@ -95,19 +95,19 @@
         }
         ?>
 
-<form action="" method="post" class="report-section">
-    <h2>Report Lost Item</h2>
-    <label for="itemNumber">Item Number:</label>
-    <input type="text" id="itemNumber" name="itemNumber" required>
+    <form action="" method="post" class="report-section">
+        <h2>Report Lost Item</h2>
+        <label for="itemNumber">Item Number:</label>
+        <input type="text" id="itemNumber" name="itemNumber" required>
 
-    <label for="itemName">Item Name:</label>
-    <input type="text" id="itemName" name="itemName" required>
+        <label for="itemName">Item Name:</label>
+        <input type="text" id="itemName" name="itemName" required>
 
-    <label for="dateFound">Date Found:</label>
-    <input type="date" id="dateFound" name="dateFound" required>
+        <label for="dateFound">Date Found:</label>
+        <input type="date" id="dateFound" name="dateFound" required>
 
-    <button type="submit">Report Lost Item</button>
-</form>
+        <button type="submit">Report Lost Item</button>
+    </form>
 
 </body>
  <script src="/One/script.js"></script>
