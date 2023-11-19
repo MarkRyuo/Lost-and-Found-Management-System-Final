@@ -34,7 +34,7 @@ $fullName = $_SESSION['full_name'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="/Assets/Aside-Nav/Aside.css">
+    <link rel="stylesheet" href="/Assets/Aside/Aside.css">
     <link rel="stylesheet" href="/User-Profile/Userprofile.css">
     <link rel="stylesheet" href="/assets/css/btn-aboutandlogout.css">
     <title>User Profile | Lost and Found</title>
@@ -119,5 +119,5 @@ $fullName = $_SESSION['full_name'];
 </body>
   <!-- Connection in Home.js -->
   <script src="/assets/js/Logout.js"></script>
-  <script src="/Assets/Aside-Nav/btn-aside.js"></script>
+  <script src="/Assets/Aside/btn-aside.js"></script>
 </html>
