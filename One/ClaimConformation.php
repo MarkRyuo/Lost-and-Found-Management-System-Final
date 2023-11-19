@@ -180,5 +180,6 @@ include 'db.php';
   
 </body>
   <script src="/Assets/js/script.js"></script>
-  
+  <!-- Connection for Aside -->
+  <script src="/Assets/Aside/btn-aside.js"></script>
 </html>
