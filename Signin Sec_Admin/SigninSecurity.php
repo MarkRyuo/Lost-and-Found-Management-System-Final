@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($user['role'] === 'admin') {
             header('Location: ../User-Profile/userProfile.php');
         } else {
-            header('Location: ');
+            header('Location: ../UserProfile Security/userProfileSecurity.php');
         }
         exit;
     } else {

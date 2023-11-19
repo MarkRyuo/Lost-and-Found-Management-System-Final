@@ -1,3 +1,32 @@
+<?php
+session_start();
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "db_nt3102";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if (!isset($_SESSION['username'])) {
+  header('Location: userProfileSecurity.php');
+  exit;
+}
+
+// if ($_SESSION['role'] !== 'admin') {
+//   // Redirect if the user is not an admin
+//   header('Location: /UserProfile Security/userProfileSecurity.php');
+//   exit;
+// }
+
+// Retrieve user information from the session
+$username = $_SESSION['username'];
+$fullName = $_SESSION['full_name'];
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,8 +35,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="/Assets/Aside/Aside.css">
-    <link rel="stylesheet" href="/UserProfile Security/Userprofile.css">
-    <link rel="stylesheet" href="/Assets/css/btn-aboutandlogout.css">
+    <link rel="stylesheet" href="/User-Profile/Userprofile.css">
+    <link rel="stylesheet" href="/assets/css/btn-aboutandlogout.css">
     <title>User Profile | Lost and Found</title>
 </head>
 <body>
@@ -73,13 +102,16 @@
         </div>
         
       <form class="input" >
-        <h1>Welcome Security</h1>
+        <h1>Welcome Security!</h1>
 
         <label for="fullName" class="fullName">Name:</label>
         <input type="text" id="fullName" name="fullName" value="<?php echo htmlspecialchars($fullName); ?>" readonly>
 
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($username); ?>" readonly>
+
+        <!-- <a href="#">Register a security?</a> 
+        <a href="/One/ClaimedItems.php">View Claimed Item</a> -->
       </form>
 
     </section>
