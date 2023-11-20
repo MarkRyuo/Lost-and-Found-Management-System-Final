@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['username'] = $user['username'];
         $_SESSION['role'] = $user['role'];
         // Assuming you retrieve full name from the database query
-        $_SESSION['full_name'] = $user['full_name'];
+        $_SESSION['usersign'] = $user['usersign'];
 
 
         // Redirect based on the user's role
