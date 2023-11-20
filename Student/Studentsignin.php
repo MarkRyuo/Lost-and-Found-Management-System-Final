@@ -13,47 +13,61 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get input data
-    $sr_code = $_POST["sr_code"];
-    $password = $_POST["password"];
+    // Check if 'srcode' is set in $_POST array
+    if (isset($_POST["srcode"])) {
+        $srcode = $_POST["srcode"];
 
-    // Check if Sr_code follows the format 00-00000
-    if (!preg_match('/^\d{2}-\d{5}$/', $sr_code)) {
-        echo "Sr_code should follow the format 00-00000.";
-        $conn->close();
-        exit();
-    }
-
-    // Check if password contains a hyphen
-    if (strpos($password, '-') === false) {
-        echo "Password should contain a hyphen.";
-        $conn->close();
-        exit();
-    }
-
-    // Check if user exists
-    $check_user_query = "SELECT * FROM student WHERE Sr_code = '$sr_code'";
-    $result = $conn->query($check_user_query);
-
-    if ($result->num_rows > 0) {
-        // User exists, check password
-        $row = $result->fetch_assoc();
-        if ($password == $row["password"]) {
-            // Login successful, redirect to a new page
-            header("Location: /ViewLost_Student/StudertViewLost.php"); // Replace with the correct path // Todo
+        // Check if Sr_code follows the format 00-00000
+        if (!preg_match('/^\d{2}-\d{5}$/', $srcode)) {
+            echo "Srcode should follow the format 00-00000.";
+            $conn->close();
             exit();
-        } else {
-            echo "Incorrect password!";
         }
     } else {
-        // User does not exist, insert new user
-        $insert_user_query = "INSERT INTO student (Sr_code, Password) VALUES ('$sr_code', '$password')";
-        if ($conn->query($insert_user_query) === TRUE) {
-            echo "Sign up successful !";
-            // Add your login logic here
-        } else {
-            echo "Error: " . $insert_user_query . "<br>" . $conn->error;
+        echo "Srcode is missing in the form submission.";
+        $conn->close();
+        exit();
+    }
+
+    // Check if 'password' is set in $_POST array
+    if (isset($_POST["password"])) {
+        $password = $_POST["password"];
+
+        // Check if password contains a hyphen
+        if (strpos($password, '-') === false) {
+            echo "Password should contain a hyphen.";
+            $conn->close();
+            exit();
         }
+
+        // Check if user exists
+        $check_user_query = "SELECT * FROM tbstudent WHERE srcode = '$srcode'";
+        $result = $conn->query($check_user_query);
+
+        if ($result->num_rows > 0) {
+            // User exists, check password
+            $row = $result->fetch_assoc();
+            if ($password == $row["password"]) {
+                // Login successful, redirect to a new page
+                header("Location: /ViewLost_Student/StudertViewLost.php"); // Replace with the correct path // Todo
+                exit();
+            } else {
+                echo "Incorrect password!";
+            }
+        } else {
+            // User does not exist, insert new user
+            $insert_user_query = "INSERT INTO tbstudent (srcode, Password) VALUES ('$srcode', '$password')";
+            if ($conn->query($insert_user_query) === TRUE) {
+                echo "Sign up successful!";
+                // Add your login logic here
+            } else {
+                echo "Error: " . $insert_user_query . "<br>" . $conn->error;
+            }
+        }
+    } else {
+        echo "Password is missing in the form submission.";
+        $conn->close();
+        exit();
     }
 }
 
@@ -100,7 +114,7 @@ $conn->close();
 
                 <h1>Signin</h1>
                 <label for="sr_code">Sr_code:</label>
-                <input type="text" id="sr_code" name="sr_code" pattern="\d{2}-\d{5}" title="Sr_code should be a 7-digit number and contain a hypen." required><br>
+                <input type="text" id="srcode" name="srcode" pattern="\d{2}-\d{5}" title="Srcode should be a 7-digit number and contain a hypen." required><br>
 
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" pattern="\d{2}-\d{5}" title="Sr_code should be a 7-digit number and contain a hypen." required><br>
