@@ -183,4 +183,25 @@ include 'db.php';
   <script src="/Assets/Aside/btn-aside.js"></script>
   <!-- Connection in Logout -->
   <script src="/Assets/js/Logout.js"></script>
+  <script>
+    function claimItem(itemId, itemName) {
+      var confirmClaim = confirm("Are you sure you want to claim the item: " + itemName + "?");
+      if (confirmClaim) {
+        // Send AJAX request to mark the item as claimed
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              // Refresh the page after claiming the item
+              location.reload();
+            } else {
+              alert("Error claiming item: " + xhr.statusText);
+            }
+          }
+        };
+        xhr.open("GET", "claim_item.php?id=" + itemId, true);
+        xhr.send();
+      }
+    }
+  </script>
 </html>
