@@ -25,7 +25,7 @@ if (!isset($_SESSION['username'])) {
 
 // Retrieve user information from the session
 $username = $_SESSION['username'];
-$fullName = $_SESSION['full_name'];
+$usersign = $_SESSION['usersign'];
 ?>
 
 <!DOCTYPE html>
@@ -104,8 +104,8 @@ $fullName = $_SESSION['full_name'];
       <form class="input" >
         <h1>Welcome Security!</h1>
 
-        <label for="fullName" class="fullName">Name:</label>
-        <input type="text" id="fullName" name="fullName" value="<?php echo htmlspecialchars($fullName); ?>" readonly>
+        <label for="fullName" class="fullName">User:</label>
+        <input type="text" id="fullName" name="fullName" value="<?php echo htmlspecialchars($usersign); ?>" readonly>
 
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($username); ?>" readonly>
