@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/Assets/css/btn-save.css">
     <!-- Add CSS for success message -->
     <link rel="stylesheet" href="/One/ReportMissing/SuccessMessage.js">
+    <link rel="stylesheet" href="/stylecursor.css">
     <title>Report Missing Item | Lost and Found </title>
     <style>
         :root {
