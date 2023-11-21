@@ -38,6 +38,7 @@ $usersign = $_SESSION['usersign'];
     <link rel="stylesheet" href="/Assets/Aside/Aside.css">
     <link rel="stylesheet" href="/User-Profile/Userprofile.css">
     <link rel="stylesheet" href="/assets/css/btn-aboutandlogout.css">
+    <link rel="stylesheet" href="/stylecursor.css">
     <title>User Profile | Lost and Found</title>
 </head>
 <body>
