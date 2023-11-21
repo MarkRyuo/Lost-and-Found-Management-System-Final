@@ -69,6 +69,7 @@ $conn->close();
     <link rel="stylesheet" href="/Student/StudentSign.css">
     <link rel="stylesheet" href="/Student/popup.css">
     <link rel="icon" type="img/x-icon" href="/Assets/Images/Batstatelogo.png">
+    <link rel="stylesheet" href="/stylecursor.css">
     <title>Student Signin | Lost ang found</title>
 </head>
 <body> 
