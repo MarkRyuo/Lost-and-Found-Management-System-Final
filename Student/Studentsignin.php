@@ -68,7 +68,7 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Student/StudentSign.css">
     <link rel="stylesheet" href="/Student/popup.css">
-    <link rel="icon" type="img/x-icon" href="/assets/Images/Batstatelogo.png">
+    <link rel="icon" type="img/x-icon" href="/Assets/Images/Batstatelogo.png">
     <title>Student Signin | Lost ang found</title>
 </head>
 <body> 
