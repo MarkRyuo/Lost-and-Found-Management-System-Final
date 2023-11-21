@@ -34,6 +34,7 @@ $usersign = $_SESSION['usersign'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="img/x-icon" href="/Assets/Images/Batstatelogo.png">
     <link rel="stylesheet" href="/Assets/Aside/Aside.css">
     <link rel="stylesheet" href="/User-Profile/Userprofile.css">
     <link rel="stylesheet" href="/assets/css/btn-aboutandlogout.css">
