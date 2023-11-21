@@ -13,6 +13,7 @@ include 'db.php';
   <link rel="icon" type="img/x-icon" href="/Assets/Images/Batstatelogo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="/Assets/css/btn-LogoutView.css">
+  <link rel="stylesheet" href="/stylecursor.css">
   <title>Claimed Item | Lost and Found</title>
   <style>
 
