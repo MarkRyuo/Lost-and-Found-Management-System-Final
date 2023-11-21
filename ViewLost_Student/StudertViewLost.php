@@ -13,6 +13,7 @@ include 'db.php';
       <link rel="stylesheet" href="/ViewLost_Student/StudentView.css">
       <link rel="stylesheet" href="/Assets/css/btn-LogoutView.css">
       <link rel="stylesheet" href="/Assets/cssViewLost/style.css">
+      <link rel="stylesheet" href="/stylecursor.css">
       <title>Student View Lost | Lost and Found</title>
       <style>
 
