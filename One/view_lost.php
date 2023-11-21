@@ -8,7 +8,7 @@ include 'db.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lost Items</title>
+    <title>L Items</title>
     <style>
         .table-container {
             height: 50vh;
