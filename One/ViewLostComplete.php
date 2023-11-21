@@ -22,6 +22,7 @@ include 'db.php';
       <link rel="stylesheet" href="/assets/css/btn-LogoutView.css">
               <!-- btn Claim Connection -->
       <link rel="stylesheet" href="/ClaimConformation/claim-btn-conformation.css">
+      <link rel="stylesheet" href="/stylecursor.css">
       <title>View Lost Item | Lost and Found</title>
       <style>
 
