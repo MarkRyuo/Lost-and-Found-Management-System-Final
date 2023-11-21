@@ -11,7 +11,7 @@ include 'db.php';
       <meta name="author" content="">
       <meta name="discription" content="">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-      <link rel="icon" type="img/x-icon" href="/assets/Images/Batstatelogo.png">
+      <link rel="icon" type="img/x-icon" href="/Assets/Images/Batstatelogo.png">
 
       <link rel="stylesheet" href="/assets/Aside/btn-Aside.css">
       <link rel="stylesheet" href="/assets/Aside/Aside.css">
