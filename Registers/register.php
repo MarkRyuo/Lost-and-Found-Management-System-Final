@@ -41,10 +41,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmtEmployee = $pdo->prepare($sqlEmployee);
         $stmtEmployee->execute([$empid, $lastname, $firstname, $department]);
 
-        // Perform SQL insertion into security
-        $sqlSecurity = "INSERT INTO security (UserId, username, password, role, usersign) VALUES (?, ?, ?, ?, ?)";
-        $stmtSecurity = $pdo->prepare($sqlSecurity);
-        $stmtSecurity->execute([$empid, $username, $hashedPassword, $role, $usersign]);
+        // Perform SQL insertion into security_lostnfound
+        $sqlsecurity_lostnfound = "INSERT INTO security_lostnfound (UserId, username, password, role, usersign) VALUES (?, ?, ?, ?, ?)";
+        $stmtsecurity_lostnfound = $pdo->prepare($sqlsecurity_lostnfound);
+        $stmtsecurity_lostnfound->execute([$empid, $username, $hashedPassword, $role, $usersign]);
 
         echo json_encode(['status' => 'success', 'message' => 'Registration successful!']);
     } catch (PDOException $e) {
