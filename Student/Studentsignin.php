@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     } else {
         // User does not exist, insert new user
-        $insert_user_query = "INSERT INTO student (Sr_code, Password) VALUES ('$sr_code', '$password')";
+        $insert_user_query = "INSERT INTO student_lostNfound (Sr_code, Password) VALUES ('$sr_code', '$password')";
         if ($conn->query($insert_user_query) === TRUE) {
             header("Location: /ViewLost_Student/StudertViewLost.php"); // Replace with the correct path // Todo
             // echo "Sign up successful !";
