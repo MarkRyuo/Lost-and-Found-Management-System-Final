@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Check if user exists
-    $check_user_query = "SELECT * FROM student WHERE Sr_code = '$sr_code'";
+    $check_user_query = "SELECT * FROM student_lostNfound WHERE Sr_code = '$sr_code'";
     $result = $conn->query($check_user_query);
 
     if ($result->num_rows > 0) {
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     } else {
         // User does not exist, insert new user
-        $insert_user_query = "INSERT INTO student (Sr_code, Password) VALUES ('$sr_code', '$password')";
+        $insert_user_query = "INSERT INTO student_lostNfound (Sr_code, Password) VALUES ('$sr_code', '$password')";
         if ($conn->query($insert_user_query) === TRUE) {
             header("Location: /ViewLost_Student/StudertViewLost.php"); // Replace with the correct path // Todo
             // echo "Sign up successful !";
