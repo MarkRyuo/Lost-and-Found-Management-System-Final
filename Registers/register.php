@@ -32,9 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
-    // Use SHA-256 for password hashing (you can use your preferred hashing method)
-    $hashedPassword = hash('sha256', $password);
-
     try {
         // Perform SQL insertion into tbemployee
         $sqlEmployee = "INSERT INTO tbemployee (empid, lastname, firstname, department) VALUES (?, ?, ?, ?)";
@@ -44,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Perform SQL insertion into security_lostnfound
         $sqlsecurity_lostnfound = "INSERT INTO security_lostnfound (UserId, username, password, role, usersign) VALUES (?, ?, ?, ?, ?)";
         $stmtsecurity_lostnfound = $pdo->prepare($sqlsecurity_lostnfound);
-        $stmtsecurity_lostnfound->execute([$empid, $username, $hashedPassword, $role, $usersign]);
+        $stmtsecurity_lostnfound->execute([$empid, $username, $password, $role, $usersign]);
 
         echo json_encode(['status' => 'success', 'message' => 'Registration successful!']);
     } catch (PDOException $e) {
