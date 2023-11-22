@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Check if user exists
-    $check_user_query = "SELECT * FROM student WHERE Sr_code = '$sr_code'";
+    $check_user_query = "SELECT * FROM student_lostNfound WHERE Sr_code = '$sr_code'";
     $result = $conn->query($check_user_query);
 
     if ($result->num_rows > 0) {
