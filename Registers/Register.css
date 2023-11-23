@@ -4,7 +4,7 @@
 :root {
   --bg-Color: hsl(347, 100%, 98%);
   --bg-color-Aside: hsl(343, 79%, 36%);
-  --bg-color-Aside-logo: hsl(343, 77%, 31%);
+  --bg-color-Aside-logo: hsl(344, 67%, 35%);
   --bg-color-Aside-shadow: hsl(343, 78%, 18%);
 }
 
@@ -22,7 +22,7 @@ body {
 .form {
   display: flex;
   flex-direction: column;
-  gap: 3vh;
+  gap: 2vh;
   max-width: 600px;
   background-color: #fff;
   padding: 20px;
@@ -31,14 +31,18 @@ body {
 
   background-color: var(--bg-Color);
 
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 30vw;
+}
+
+.input {
+  font-size: 1.2rem;
 }
 
 
 .title {
   font-size: 28px;
-  color: royalblue;
+  color: var(--bg-color-Aside);
   font-weight: 600;
   letter-spacing: -1px;
   position: relative;
@@ -54,13 +58,13 @@ body {
   width: 16px;
   border-radius: 50%;
   left: 0px;
-  background-color: royalblue;
+  background-color: var(--bg-color-Aside);
 }
 
 .title::before {
   width: 18px;
   height: 18px;
-  background-color: royalblue;
+  background-color: var(--bg-color-Aside);
 }
 
 .title::after {
@@ -132,7 +136,7 @@ body {
 .submit {
   border: none;
   outline: none;
-  background-color: royalblue;
+  background-color: var(--bg-color-Aside-logo);
   padding: 10px;
   border-radius: 10px;
   color: #fff;
@@ -141,12 +145,33 @@ body {
 }
 
 .submit:hover {
-  background-color: rgb(56, 90, 194);
+  background-color: var(--bg-color-Aside);
 }
 
 #firstname {
-  width: 8vw;
+  width: 12vw;
 }
+
+#empid {
+  width: 5.5vw ;
+}
+
+#username {
+  width: 12vw;
+}
+
+#password {
+  width: 16vw;
+}
+
+#usersign {
+  width: 18vw;
+}
+
+#department {
+  width: 25vw;
+}
+
 
 
 @keyframes pulse {
