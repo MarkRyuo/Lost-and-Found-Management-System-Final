@@ -1,13 +1,27 @@
+
+
+
+body {
+  background-color: ;
+  display: flex;
+}
+
+
+
 .form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 350px;
+  gap: 3vh;
+  max-width: 400px;
   background-color: #fff;
   padding: 20px;
   border-radius: 20px;
   position: relative;
+
+  border: 1px solid black;
+  width: 30vw;
 }
+
 
 .title {
   font-size: 28px;
@@ -116,6 +130,11 @@
 .submit:hover {
   background-color: rgb(56, 90, 194);
 }
+
+#firstname {
+  width: 8vw;
+}
+
 
 @keyframes pulse {
   from {

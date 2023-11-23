@@ -35,14 +35,13 @@
     <form id="registrationForm" action="register.php" method="post" onsubmit="return validateForm()" class="form">
         <p class="title">User Register </p>
         <p class="message">Signup the Employee Personel </p>
-            <div class="flex">
-    
+
         <label for="empid">
-                <input required="" placeholder="" class="input" type="text" id="empid" name="empid" required>>
-                <span>Employee ID</span>
-            </label>
-    
-    
+            <input required="" placeholder="" class="input" type="text" id="empid" name="empid" required>
+            <span>Employee ID</span>
+        </label>
+
+            <div class="flex">
             <label for="firstname">
                 <input required="" placeholder="" class="input" type="text" id="firstname" name="firstname" required>
                 <span>Firstname</span>
@@ -84,6 +83,10 @@
     
         <button class="submit" value="Register">Submit</button>
     </form>
+
+    <div class="Back">
+        <button>Back</button>
+    </div>
 
     <script>
         document.getElementById('registrationForm').addEventListener('submit', function(event) {
