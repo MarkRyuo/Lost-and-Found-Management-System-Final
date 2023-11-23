@@ -172,6 +172,11 @@ body {
   width: 25vw;
 }
 
+#Back {
+  background-color: var(--bg-Color);
+  margin-top: 5vh;
+}
+
 
 
 @keyframes pulse {
