@@ -12,7 +12,9 @@
 
 body {
   background-color: var(--bg-Color);
-  display: flex;
+  display: flex;  
+  justify-content: center;
+  
 }
 
 
@@ -21,11 +23,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3vh;
-  max-width: 400px;
+  max-width: 600px;
   background-color: #fff;
   padding: 20px;
   border-radius: 20px;
-  position: relative;
+  /* position: relative; */
 
   background-color: var(--bg-Color);
 
