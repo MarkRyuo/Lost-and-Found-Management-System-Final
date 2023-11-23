@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Registers/Register.css">
+    <link rel="stylesheet" href="/Assets/css/btn-aboutandlogout.css">
+    <link rel="icon" type="img/x-icon" href="/Assets/Images/Batstatelogo.png">
     <title>User Registration</title>
     <script>
         // Handle the form submission response
@@ -31,38 +34,68 @@
     </script>
 </head>
 <body>
-    <h2>User Registration</h2>
-    <form id="registrationForm" action="register.php" method="post" onsubmit="return validateForm()">
-        <!-- Your form fields here -->
-        <label for="empid">Employee ID:</label>
-        <input type="text" id="empid" name="empid" required>
+    <form id="registrationForm" action="register.php" method="post" onsubmit="return validateForm()" class="form">
+        <p class="title">User Register </p>
+        <p class="message">Signup the Employee Personel </p>
 
-        <label for="firstname">First Name:</label>
-        <input type="text" id="firstname" name="firstname" required>
+        <label for="empid">
+            <input required="" placeholder="" class="input" type="text" id="empid" name="empid" required>
+            <span>Employee ID</span>
+        </label>
 
-        <label for="lastname">Last Name:</label>
-        <input type="text" id="lastname" name="lastname" required>
-
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        
-        <label for="role">Role:</label>
-        <select id="role" name="role" required>
-            <option value="security">Security</option>
-            <option value="admin">Admin</option>
-        </select>
-        
-        <label for="usersign">User Sign:</label>
-        <input type="text" id="usersign" name="usersign" required>
-
-        <label for="department">Department:</label>
-        <input type="text" id="department" name="department" required>
-
-        <input type="submit" value="Register">
+            <div class="flex">
+            <label for="firstname">
+                <input required="" placeholder="" class="input" type="text" id="firstname" name="firstname" required>
+                <span>Firstname</span>
+            </label>
+    
+            <label for="lastname">
+                <input required="" placeholder="" class="input" type="text" id="lastname" name="lastname" required>
+                <span>Lastname</span>
+            </label>
+        </div>  
+                
+        <label for="username">
+            <input required="" placeholder="" class="input" type="text" id="username" name="username" required>
+            <span>Username</span>
+        </label> 
+            
+        <label for="password">
+            <input required="" placeholder="" class="input" type="password" id="password" name="password" required>
+            <span>Password</span>
+        </label>
+    
+        <label for="role">
+        <select id="role" name="role" required class="input">
+                <option value="security">Security</option>
+                <option value="admin">Admin</option>
+            </select>
+        <span>Role</span>
+        </label>
+    
+        <label for="usersign">
+            <input required="" placeholder="" class="input" type="text" id="usersign" name="usersign" required>
+            <span>UserSign</span>
+        </label>
+    
+        <label for="department">
+            <input required="" placeholder="" class="input" type="text" id="department" name="department" required>
+            <span>Department</span>
+        </label>
+    
+        <button class="submit" value="Register">Submit</button>
     </form>
+
+    <header class="nav">
+        <nav class="parent-Nav">
+          <div class="user-button-Log-out">
+            <button id="Back" class="box btn-color-Logout">
+              <i class="fa-solid fa-right-from-bracket fa-bounce"></i> <!--This is Bouncing Icon-->
+              Back >>  <!--This is Text Logout-->
+            </button> 
+          </div>
+        </nav>
+      </header>
 
     <script>
         document.getElementById('registrationForm').addEventListener('submit', function(event) {
@@ -83,4 +116,5 @@
         });
     </script>
 </body>
+    <script src="/Assets/js/Back.js"></script>
 </html>

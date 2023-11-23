@@ -1,0 +1,192 @@
+
+
+
+:root {
+  --bg-Color: hsl(347, 100%, 98%);
+  --bg-color-Aside: hsl(343, 79%, 36%);
+  --bg-color-Aside-logo: hsl(344, 67%, 35%);
+  --bg-color-Aside-shadow: hsl(343, 78%, 18%);
+}
+
+
+
+body {
+  background-color: var(--bg-Color);
+  display: flex;  
+  justify-content: center;
+  
+}
+
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  /* position: relative; */
+
+  background-color: var(--bg-Color);
+
+  /* border: 1px solid black; */
+  width: 30vw;
+}
+
+.input {
+  font-size: 1.2rem;
+}
+
+
+.title {
+  font-size: 28px;
+  color: var(--bg-color-Aside);
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.title::before,.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: var(--bg-color-Aside);
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+  background-color: var(--bg-color-Aside);
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.message, .signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a {
+  color: royalblue;
+}
+
+.signin a:hover {
+  text-decoration: underline royalblue;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,.form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form label .input:valid + span {
+  color: green;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  background-color: var(--bg-color-Aside-logo);
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+}
+
+.submit:hover {
+  background-color: var(--bg-color-Aside);
+}
+
+#firstname {
+  width: 12vw;
+}
+
+#empid {
+  width: 5.5vw ;
+}
+
+#username {
+  width: 12vw;
+}
+
+#password {
+  width: 16vw;
+}
+
+#usersign {
+  width: 18vw;
+}
+
+#department {
+  width: 25vw;
+}
+
+#Back {
+  background-color: var(--bg-Color);
+  margin-top: 5vh;
+}
+
+
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
