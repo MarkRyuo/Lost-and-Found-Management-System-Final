@@ -110,5 +110,5 @@ include 'db.php';
 </body>
 <script src="script.js"></script>
 <!-- Connection back btn -->
-<script src="/Assets/js/Back.js"></script>
+<script src="/Assets/js/Backbutnoalert.js"></script>
 </html>
