@@ -39,7 +39,7 @@ body {
 }
 
 .navigation .Home a .fa-solid:hover {
-  color: var(--hover-Home);
+  color: var(--shadow-nav);
 }
 
 
