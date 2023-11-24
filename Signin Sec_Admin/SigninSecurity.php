@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
 
     // Use prepared statements to prevent SQL injection
-    $stmt = $conn->prepare('SELECT * FROM security WHERE username = ? AND password = ?');
+    $stmt = $conn->prepare('SELECT * FROM tbsecurity WHERE username = ? AND password = ?');
     $stmt->bind_param('ss', $username, $password);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['username'] = $user['username'];
         $_SESSION['role'] = $user['role'];
         // Assuming you retrieve full name from the database query
-        $_SESSION['full_name'] = $user['full_name'];
+        $_SESSION['usersign'] = $user['usersign'];
 
 
         // Redirect based on the user's role
