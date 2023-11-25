@@ -1,6 +1,6 @@
 /* Import font's */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap");
 
 *{
   margin: 0;
@@ -11,8 +11,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Font Link's */
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap");
 
 :root {
   --box-Color: hsl(347, 100%, 98%);
