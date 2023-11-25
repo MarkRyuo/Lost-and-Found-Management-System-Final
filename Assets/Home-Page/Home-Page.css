@@ -1,7 +1,7 @@
 /* Import font's */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -143,4 +143,9 @@ h3 {
 .second {
   flex-direction: row;
   gap: 1.6em;
+}
+
+/* Change Font */
+.card p {
+  font-family: 'Lato', sans-serif;
 }
