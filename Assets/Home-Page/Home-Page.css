@@ -164,4 +164,13 @@ h3 {
 .parent-footer {
   border: 1px solid #fff;
   width: 60vw;
+  height: 50vh;
+}
+
+.footer-image img {
+  width: 200px;
+}
+
+.footer-image {
+  border: 1px solid white;
 }
