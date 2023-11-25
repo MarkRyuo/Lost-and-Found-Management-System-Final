@@ -14,7 +14,7 @@ html {
 
 :root {
   --box-Color: hsl(347, 100%, 98%);
-  --b-Color: hsl(343, 76%, 25%);
+  --b-Color: hsla(343, 76%, 25%, 0.905);
   --color: #333;
   --text-Color: hsl(342, 73%, 7%);
 }
