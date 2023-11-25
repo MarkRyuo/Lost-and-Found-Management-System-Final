@@ -160,3 +160,7 @@ h3 {
 }
 
 /* Footer */
+
+.parent-footer {
+  border: 1px solid #fff;
+}
