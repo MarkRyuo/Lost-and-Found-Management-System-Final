@@ -161,6 +161,12 @@ h3 {
 
 /* Footer */
 
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .parent-footer {
   border: 1px solid #fff;
   width: 60vw;
