@@ -198,8 +198,14 @@ h3 {
 }
 
 
-.div-contact{
+.div-contact a{
   background-color: var(--b-Color);
+  padding: 14px 0
+}
+
+.div-contact img{
+  width: 50px;
+  border: 1px solid black;
 }
 
 .Contact-us .div-contact {
