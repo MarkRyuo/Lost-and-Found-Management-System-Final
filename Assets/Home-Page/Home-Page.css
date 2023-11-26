@@ -171,6 +171,9 @@ h3 {
   border: 1px solid #fff;
   width: 70vw;
   height: 50vh;
+
+  display: flex;
+  
 }
 
 .footer-image img {
@@ -182,3 +185,4 @@ h3 {
   width: 11vw;
   height: 30vh;
 }
+
