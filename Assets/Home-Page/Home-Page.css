@@ -194,10 +194,15 @@ h3 {
 .Our-Team h1,
 .Contact-us h1 {
   color: #fff;
-  font-size: 2rem;
+  font-size: 2.4rem;
 }
 
 /* Div-Contact us */
+
+.Contact-us {
+  /* border: 1px solid black; */
+  text-align: center;
+}
 
 .div-contact a{
   background-color: var(--b-Color);
@@ -216,3 +221,14 @@ h3 {
 }
 
 /* Our Team */
+
+.Our-Team {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.Our-Team p {
+  color: #fff;
+  font-size: 1.3rem;
+}
