@@ -17,6 +17,7 @@ html {
   --b-Color: rgba(164, 19, 60, 100%);
   --color: #333;
   --text-Color: hsl(342, 73%, 7%);
+  --bx-sh-color : rgb(0, 0, 0, 25%)
 }
 
 /* html{
@@ -168,10 +169,10 @@ h3 {
 }
 
 .parent-footer {
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
   width: 70vw;
   height: 50vh;
-  color: #fff;
+  box-shadow: 0px 4px 5px var(--bx-sh-color);
 
   display: flex;
   
