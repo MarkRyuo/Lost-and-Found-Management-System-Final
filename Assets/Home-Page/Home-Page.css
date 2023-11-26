@@ -198,6 +198,12 @@ h3 {
 }
 
 
-.div-contact {
+.div-contact{
+  background-color: var(--b-Color);
+}
+
+.Contact-us .div-contact {
+  display: flex;
   
+  border: 1px solid black;
 }
