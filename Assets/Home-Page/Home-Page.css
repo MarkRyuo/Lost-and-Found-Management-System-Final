@@ -206,11 +206,13 @@ h3 {
 
 .div-contact img{
   width: 50px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .Contact-us .div-contact {
   display: flex;
   
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
+
+/* Our Team */
