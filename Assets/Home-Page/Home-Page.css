@@ -175,11 +175,13 @@ h3 {
   box-shadow: 0px 4px 5px var(--bx-sh-color);
 
   display: flex;
+  align-items: center;
+  justify-content: space-around;
   
 }
 
 .footer-image img {
-  width: 200px;
+  width: 250px;
 }
 
 .footer-image {
