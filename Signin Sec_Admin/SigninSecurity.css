@@ -40,7 +40,7 @@ body  {
 
 .Form-Signin {
   /* border: 1px solid var(--bg-color-Aside);g */
-  box-shadow: 10px 5px 10px #FF3F3F;
+  box-shadow: 5px 5px 10px #FF3F3F;
 
   height: 60vh;
   width: 25vw;
@@ -50,7 +50,7 @@ body  {
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  gap: 1vh;
+  gap: 2vh;
 }
 
 /* Design form input */
@@ -61,11 +61,11 @@ label {
 
 #username,
 #password {
-  width: 13vw;
-  height: 5vh;
+  width: 15vw;
+  height: 6vh;
 
   border-radius: 30px;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   text-align: center;
 }
 
