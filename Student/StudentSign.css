@@ -78,7 +78,7 @@ label {
 
 #sr_code,
 #password {
-  width: 16vw;
+  width: 15vw;
   height: 6vh;
 
   border-radius: 30px;
@@ -112,7 +112,7 @@ label {
 .Form-Signin h1 {
   font-size: 2.1rem;
 
-  margin-left: 5vw;
+  margin-left: 4.5vw;
 }
 
 
