@@ -78,23 +78,35 @@ label {
 
 #sr_code,
 #password {
-  width: 13vw;
-  height: 5vh;
+  width: 16vw;
+  height: 6vh;
 
   border-radius: 30px;
   font-size: 1.3rem;
   text-align: center;
 }
 
+.Form-Signin label {
+  color: #5e5e5e;
+}
+
 .sign-btn {
-  width: 5vw;
-  height: 4vh;
+  width:7vw;
+  height: 6vh;
 
   border-radius: 30px;
   font-size: 1.1rem;
   text-align: center;
 
   margin-left: 4vw;
+
+  background-color: var(--bg-color-Aside);
+  color: #fff;
+}
+
+.sign-btn:hover {
+  background-color: var(--bg-Color);
+  color: #000;
 }
 
 .Form-Signin h1 {
@@ -103,3 +115,43 @@ label {
   margin-left: 4vw;
 }
 
+
+/* Blank */
+
+.blank {
+  /* border: 1px solid black; */
+
+  background-color: var(--bg-color-Aside);
+  
+  width: 30vw;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: flex;
+  padding-left: 1vw;
+  /* background-image: url(/assets/Images/Batstatelogo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 50%; */
+}
+
+
+
+
+.sub-blank {
+  /* border: 1px solid black; */
+
+  width: 30vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1vw;
+}
+
+.sub-blank h1 {
+  font-family: 'Inter', sans-serif;
+}
+
+.Form-Signin h1 {
+  color: #590D22;
+  font-size: 2.5rem;
+}
