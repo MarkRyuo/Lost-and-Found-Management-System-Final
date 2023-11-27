@@ -62,7 +62,7 @@ label {
 
 #username,
 #password {
-  width: 13vw;
+  width: 15vw;
   height: 5vh;
 
   border-radius: 30px;
@@ -96,7 +96,7 @@ label {
 .Form-Signin h1 {
   font-size: 2rem;
 
-  margin-left: 4vw;
+  margin-left: 4.5vw;
 }
 
 
