@@ -33,7 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $stmt->close();
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -73,8 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           </div>
         </div>
   </div>
-
-  </body>
+</body>
       <script>
         // You can add client-side validation or other functionalities here.
       </script>
