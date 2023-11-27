@@ -1,4 +1,5 @@
 /* Import Font Here */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
 
 *{
   margin: 0;
@@ -10,7 +11,7 @@
   --bg-Color: hsl(347, 100%, 98%);
   --bg-color-Aside: hsl(343, 79%, 36%);
   --bg-color-Aside-logo: hsl(343, 77%, 31%);
-  --bg-color-Aside-shadow: hsl(343, 78%, 18%);
+  --bg-color-Aside-shadow: hsl(343, 78%, 18%); 
 }
 
 body  {
@@ -39,18 +40,18 @@ body  {
 }
 
 .Form-Signin {
-  border: 1px solid var(--bg-color-Aside);
-  box-shadow: 2px 2px 5px var(--bg-color-Aside-shadow);
+  /* border: 1px solid var(--bg-color-Aside);g */
+  box-shadow: 5px 3px 10px #FF3F3F;
 
-  height: 50vh;
-  width: 20vw;
+  height: 60vh;
+  width: 25vw;
 
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  gap: 1vh;
+  gap: 2vh;
 }
 
 /* Design form input */
@@ -65,19 +66,31 @@ label {
   height: 5vh;
 
   border-radius: 30px;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   text-align: center;
 }
 
+.Form-Signin label {
+  color: #5e5e5e;
+}
+
 .sign-btn {
-  width: 5vw;
-  height: 4vh;
+  width:7vw;
+  height: 6vh;
 
   border-radius: 30px;
   font-size: 1.1rem;
   text-align: center;
 
   margin-left: 4vw;
+
+  background-color: var(--bg-color-Aside);
+  color: #fff;
+}
+
+.sign-btn:hover {
+  background-color: var(--bg-Color);
+  color: #000;
 }
 
 .Form-Signin h1 {
@@ -95,11 +108,35 @@ label {
   background-color: var(--bg-color-Aside);
   
   width: 30vw;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: flex;
+  padding-left: 1vw;
   /* background-image: url(/assets/Images/Batstatelogo.png);
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 50%; */
+}
+
+
+
+
+.sub-blank {
+  /* border: 1px solid black; */
+
+  width: 30vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1vw;
+}
+
+.sub-blank h1 {
+  font-family: 'Inter', sans-serif;
+}
+
+.Form-Signin h1 {
+  color: #590D22;
+  font-size: 2.5rem;
 }
 

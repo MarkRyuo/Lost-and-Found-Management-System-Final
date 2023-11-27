@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Student/StudentSign.css">
+    <link rel="stylesheet" href="/Student/popup.css">
+    <link rel="icon" type="img/x-icon" href="/Assets/Images/Batstatelogo.png">
+    <link rel="stylesheet" href="/stylecursor.css">
+    <title>Student Signin | Lost ang found</title>
+</head>
+<body>
+
+  <div class="container">
+    <!-- End Popup content -->
+        <section class="sec-form">
+          <form method="post" class="Form-Signin" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>
+
+                <h1>Signin</h1>
+                <label for="sr_code">Sr_code:</label>
+                <input type="text" id="sr_code" name="sr_code" pattern="\d{2}-\d{5}" title="Sr_code should be a 7-digit number and contain a hypen." required><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" pattern="\d{2}-\d{5}" title="Sr_code should be a 7-digit number and contain a hypen." required><br>
+
+                <input type="submit" value="Signin" class="sign-btn">
+
+            </form>
+        </section>
+
+        <div class="blank">
+          <div class="sub-blank">
+            <img src="/Assets/Images/Batstatelogo.png" alt="Bsu Logo" style="width: 140px; height: 130px;">
+            <h1 style="color: #fff; font-size: 3rem;">Lost and Found</h1>
+          </div>
+        </div>
+
+    </div>
+</body>
+    <script src="/Student/Popup.js"></script>
+</html>
