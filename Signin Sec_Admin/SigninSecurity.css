@@ -40,7 +40,7 @@ body  {
 
 .Form-Signin {
   /* border: 1px solid var(--bg-color-Aside);g */
-  box-shadow: 5px 5px 10px #FF3F3F;
+  box-shadow: 5px 3px 10px #FF3F3F;
 
   height: 60vh;
   width: 25vw;
