@@ -1,5 +1,5 @@
 /* Import Font Here */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lato:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
 
 *{
   margin: 0;
@@ -132,7 +132,7 @@ label {
 }
 
 .sub-blank h1 {
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
 }
 
 .Form-Signin h1 {
