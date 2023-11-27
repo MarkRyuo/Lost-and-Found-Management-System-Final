@@ -1,4 +1,5 @@
 /* Import Font Here */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lato:ital,wght@1,700&display=swap');
 
 *{
   margin: 0;
@@ -107,12 +108,31 @@ label {
   background-color: var(--bg-color-Aside);
   
   width: 30vw;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: flex;
+  padding-left: 1vw;
   /* background-image: url(/assets/Images/Batstatelogo.png);
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 50%; */
+}
+
+
+
+
+.sub-blank {
+  /* border: 1px solid black; */
+
+  width: 30vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1vw;
+}
+
+.sub-blank h1 {
+  font-family: Inter;
 }
 
 .Form-Signin h1 {
