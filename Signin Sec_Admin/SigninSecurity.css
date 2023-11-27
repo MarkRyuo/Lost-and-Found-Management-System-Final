@@ -42,8 +42,8 @@ body  {
   /* border: 1px solid var(--bg-color-Aside);g */
   box-shadow: 10px 5px 10px #FF3F3F;
 
-  height: 50vh;
-  width: 20vw;
+  height: 60vh;
+  width: 25vw;
 
   display: flex;
   flex-direction: column;
