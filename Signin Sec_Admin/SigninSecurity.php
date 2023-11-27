@@ -65,7 +65,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </form>
 
     </section>
+    
         <div class="blank">
+          <div class="sub-blank">
+            <img src="/Assets/Images/Batstatelogo.png" alt="Bsu Logo" style="width: 140px; height: 130px;">
+            <h1 style="color: #fff; font-size: 3rem;">Lost and Found</h1>
+          </div>
         </div>
   </div>
 
