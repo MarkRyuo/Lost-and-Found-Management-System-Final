@@ -99,7 +99,6 @@ $conn->close();
     <!-- End Popup content -->
         <section class="sec-form">
             <form method="post" class="Form-Signin" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-
                 <h1>Signin</h1>
                 <label for="sr_code">Sr_code:</label>
                 <input type="text" id="sr_code" name="sr_code" pattern="\d{2}-\d{5}" title="Sr_code should be a 7-digit number and contain a hypen." required><br>
@@ -113,6 +112,10 @@ $conn->close();
         </section>
 
         <div class="blank">
+          <div class="sub-blank">
+            <img src="/Assets/Images/Batstatelogo.png" alt="Bsu Logo" style="width: 140px; height: 130px;">
+            <h1 style="color: #fff; font-size: 3rem;">Lost and Found</h1>
+          </div>
         </div>
 
     </div>
