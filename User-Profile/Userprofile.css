@@ -1,5 +1,5 @@
 /* Import Font Here */
-
+@import url('https://fonts.googleapis.com/css2?family=Kameron&display=swap');
 
 :root {
   --bg-color-nav: hsl(343, 79%, 36%);
@@ -51,6 +51,7 @@ body {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   color: #fff;
+  font-family: 'Kameron', serif;
 
 }
 
@@ -90,6 +91,7 @@ body {
   font-size: 1.3rem;
   border-radius: 20px;
   text-align: center;
+  font-family: 'Kameron', serif;
 }
 
 
@@ -107,13 +109,14 @@ body {
 
 .input h1 {
   font-size: 2.5rem;
-  /* Todo : Font Family */
+  font-family: 'Kameron', serif;
 }
 
 .input label {
   font-size: 1.2rem;
   margin-right: 16vw;
   color: rgb(100, 99, 99);
+  font-family: 'Kameron', serif;
 }
 
 .input .fullName {
@@ -124,6 +127,7 @@ body {
   font-size: 1.2rem;
   color: var(--bg-color-Aside-shadow);
   text-decoration: none;
+  font-family: 'Kameron', serif;
 }
 
 .input a:hover {
