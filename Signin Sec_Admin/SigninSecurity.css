@@ -69,9 +69,13 @@ label {
   text-align: center;
 }
 
+.Form-Signin label {
+  color: #5e5e5e;
+}
+
 .sign-btn {
   width:7vw;
-  height: 5vh;
+  height: 6vh;
 
   border-radius: 30px;
   font-size: 1.1rem;
@@ -81,6 +85,11 @@ label {
 
   background-color: var(--bg-color-Aside);
   color: #fff;
+}
+
+.sign-btn:hover {
+  background-color: var(--bg-Color);
+  color: #000;
 }
 
 .Form-Signin h1 {
