@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 require_once('db.php');
 
@@ -41,8 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="icon" type="img/x-icon" href="/Assets/Images/Batstatelogo.png">
-      <link rel="stylesheet" href="/Signin Sec_Admin/SigninSecurity.css">
-      <link rel="stylesheet" href="/stylecursor.css">
+      <link rel="stylesheet" href="SigninSecurity.css">
+      <link rel="stylesheet" href="stylecursor.css">
       <title>Signin Seurity | Lost and Found</title>
   </head>
   <body>
@@ -67,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
         <div class="blank">
           <div class="sub-blank">
-            <img src="/Assets/Images/Batstatelogo.png" alt="Bsu Logo" style="width: 140px; height: 130px;">
+            <img src="Batstatelogo.png" alt="Bsu Logo" style="width: 140px; height: 130px;">
             <h1 style="color: #fff; font-size: 3rem;">Lost and Found</h1>
           </div>
         </div>
