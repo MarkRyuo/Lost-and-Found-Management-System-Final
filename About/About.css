@@ -27,7 +27,7 @@ body {
   height: 11vh;
   width: 100vw;
   background-color: var(--bgnav-Color);
-  box-shadow: 5px 8px 3px var(--shadow-nav);
+  /* box-shadow: 5px 8px 3px var(--shadow-nav); */
 }
 
 
@@ -57,7 +57,7 @@ body {
 section {
   /* border: 1px solid black; */
   width: 100vw;
-  height: 90vh;
+  height: 80vh;
 }
 
 .about-lostandfound {
@@ -72,6 +72,7 @@ section {
   text-align: justify;
   letter-spacing: 1.2px;
   word-spacing: 1px;
+  line-height: 28px;
 
 }
 
@@ -80,6 +81,7 @@ h3{
   text-align: center;
   margin-top: 15px;
   margin-bottom: 15px;
+  font-size: 1.4rem;
 }
 
 p{
@@ -91,6 +93,7 @@ p{
 h1{
   text-align: center;
   margin-bottom: 15px;
+  font-size: 1.4rem;
 }
 
 .text-container{
@@ -98,5 +101,9 @@ h1{
   border-radius: 10px;
   border-color: white;
   box-shadow: 3px 3px 5px var(--shadow-nav);
+}
+
+.text-container h1 {
+  font-size: 1.3rem;
 }
 
