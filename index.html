@@ -1,3 +1,6 @@
+To make the buttons and other elements fit within a `container-lg`, you need to wrap the content inside a `div` with the class `container-lg`. Here's the modified code with the changes:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,43 +20,47 @@
 </head>
 <body>
 
-<div class="container">
-  <h1>Lost and Found Management System</h1>
-  <p class="con-Text"><q>Your lost items can be restored through this system</q></p>
-  <a href="/About/About.html" class="btn btn-danger btn-lg">Learn More &raquo;</a>
-  <a href="#Sign-in" class="btn btn-danger btn-lg">Sign in ▼▼▼</a>
+<div class="container-lg">
+  <div class="container">
+    <h1>Lost and Found Management System</h1>
+    <p class="con-Text"><q>Your lost items can be restored through this system</q></p>
+    <a href="/About/About.html" class="btn btn-danger btn-lg">Learn More &raquo;</a>
+    <a href="#Sign-in" class="btn btn-danger btn-lg">Sign in ▼▼▼</a>
+  </div>
 </div>
 
 <div class="blank"></div>
 
-<div class="container second" id="Sign-in">
-  <div class="row">
-    <div class="col-md-4">
-      <div class="item">
-        <div class="img img-first"></div>
-        <div class="card">
-          <h3>Student</h3>
-          <p class="font-size-1-1rem"><mark>Welcome</mark>!!<br> Are you a Student? Do you lose something? Sign in here</p>
-            <button id="studentSignin" class="btn btn-outline-danger btn-lg">Sign in</button>
+<div class="container-lg">
+  <div class="container second" id="Sign-in">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="item">
+          <div class="img img-first"></div>
+          <div class="card">
+            <h3>Student</h3>
+            <p class="font-size-1-1rem"><mark>Welcome</mark>!!<br> Are you a Student? Do you lose something? Sign in here</p>
+              <button id="studentSignin" class="btn btn-outline-danger btn-lg">Sign in</button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="item">
-        <div class="img img-second"></div>
-        <div class="card">
-          <h3>Security</h3>
-          <p class="font-size-1-1rem"><mark>Good Day</mark>!! <br> Anyone missing stuff? Let's sign it! Sign in here </p>
-          <button id="securitySignin" class="btn btn-outline-danger btn-lg">Sign in</button>
+      <div class="col-md-4">
+        <div class="item">
+          <div class="img img-second"></div>
+          <div class="card">
+            <h3>Security</h3>
+            <p class="font-size-1-1rem"><mark>Good Day</mark>!! <br> Anyone missing stuff? Let's sign it! Sign in here </p>
+            <button id="securitySignin" class="btn btn-outline-danger btn-lg">Sign in</button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="item">
-        <div class="img img-third"></div>
-        <div class="card">
-          <h3>Welcome</h3>
-          <p class="font-size-1-1rem">Welcome to our Lost and Found Management System! If you lose your use? With the system you can see the missing items   </p>
+      <div class="col-md-4">
+        <div class="item">
+          <div class="img img-third"></div>
+          <div class="card">
+            <h3>Welcome</h3>
+            <p class="font-size-1-1rem">Welcome to our Lost and Found Management System! If you lose your use? With the system you can see the missing items   </p>
+          </div>
         </div>
       </div>
     </div>
@@ -93,4 +100,3 @@
 <!-- Custom Script -->
 <script src="/Assets/Home-Page/Homepage-btn.js"></script>
 </body>
-</html>
