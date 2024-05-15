@@ -1,6 +1,3 @@
-Sure, here's the completion of the API implementation:
-
-```php
 <?php
 require_once('db.php');
 
