@@ -1,25 +1,13 @@
 <?php
+
 session_start();
 require_once('db.php');
-require_once('vendor/autoload.php'); // Import PHP JWT library
 
-use \Firebase\JWT\JWT;
-
-// Function to generate JWT token
-function generateJWT($username, $role) {
-    $payload = [
-        "username" => $username,
-        "role" => $role,
-        "exp" => time() + (60 * 60) // Token expiration time (1 hour)
-    ];
-    return JWT::encode($payload, "your_secret_key");
-}
-
-// Process POST request for authentication
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
+    // Use prepared statements to prevent SQL injection
     $stmt = $conn->prepare('SELECT * FROM security_lostnfound WHERE username = ? AND password = ?');
     $stmt->bind_param('ss', $username, $password);
     $stmt->execute();
@@ -27,14 +15,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
+        $_SESSION['username'] = $user['username'];
+        $_SESSION['role'] = $user['role'];
+        // Assuming you retrieve full name from the database query
+        $_SESSION['usersign'] = $user['usersign'];
 
-        // Generate JWT token
-        $jwtToken = generateJWT($user['username'], $user['role']);
 
-        // Set token in session or response
-        $_SESSION['token'] = $jwtToken;
-
-        // Redirect or respond based on user's role
+        // Redirect based on the user's role
         if ($user['role'] === 'admin') {
             header('Location: ../User-Profile/userProfile.php');
         } else {
@@ -47,21 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $stmt->close();
 }
-
-// Example of protected resource endpoint
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_SESSION['token'])) {
-    // Verify JWT token
-    try {
-        $decoded = JWT::decode($_SESSION['token'], "your_secret_key", array('HS256'));
-        // Access granted, return data or perform action
-        echo "Welcome, " . $decoded->username . "!";
-    } catch (Exception $e) {
-        http_response_code(401);
-        echo "Unauthorized";
-    }
-}
 ?>
-
 
 <!DOCTYPE html>
   <html lang="en">
