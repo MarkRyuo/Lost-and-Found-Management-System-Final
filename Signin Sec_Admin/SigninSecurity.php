@@ -1,12 +1,25 @@
 <?php
+session_start();
 require_once('db.php');
+require_once('vendor/autoload.php'); // Import PHP JWT library
 
-// API endpoint for user authentication
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'login') {
+use \Firebase\JWT\JWT;
+
+// Function to generate JWT token
+function generateJWT($username, $role) {
+    $payload = [
+        "username" => $username,
+        "role" => $role,
+        "exp" => time() + (60 * 60) // Token expiration time (1 hour)
+    ];
+    return JWT::encode($payload, "your_secret_key");
+}
+
+// Process POST request for authentication
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Use prepared statements to prevent SQL injection
     $stmt = $conn->prepare('SELECT * FROM security_lostnfound WHERE username = ? AND password = ?');
     $stmt->bind_param('ss', $username, $password);
     $stmt->execute();
@@ -14,69 +27,41 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
 
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
-        $response = array(
-            'status' => 'success',
-            'message' => 'User authenticated successfully',
-            'token' => generateToken($user['username'], $user['role'])
-        );
+
+        // Generate JWT token
+        $jwtToken = generateJWT($user['username'], $user['role']);
+
+        // Set token in session or response
+        $_SESSION['token'] = $jwtToken;
+
+        // Redirect or respond based on user's role
+        if ($user['role'] === 'admin') {
+            header('Location: ../User-Profile/userProfile.php');
+        } else {
+            header('Location: ../UserProfile Security/userProfileSecurity.php');
+        }
+        exit;
     } else {
-        $response = array(
-            'status' => 'error',
-            'message' => 'Invalid username or password'
-        );
+        echo "Invalid username or password";
     }
 
     $stmt->close();
-
-    header('Content-Type: application/json');
-    echo json_encode($response);
-    exit;
 }
 
-// API endpoint for verifying token and checking authorization
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['action'] === 'verifyToken') {
-    $token = isset($_GET['token']) ? $_GET['token'] : null;
-
-    if (verifyToken($token)) {
-        // Token is valid, user is authorized
-        $response = array(
-            'status' => 'success',
-            'message' => 'Token verified, user authorized'
-        );
-    } else {
-        // Token is invalid or expired
-        $response = array(
-            'status' => 'error',
-            'message' => 'Invalid or expired token'
-        );
+// Example of protected resource endpoint
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_SESSION['token'])) {
+    // Verify JWT token
+    try {
+        $decoded = JWT::decode($_SESSION['token'], "your_secret_key", array('HS256'));
+        // Access granted, return data or perform action
+        echo "Welcome, " . $decoded->username . "!";
+    } catch (Exception $e) {
+        http_response_code(401);
+        echo "Unauthorized";
     }
-
-    header('Content-Type: application/json');
-    echo json_encode($response);
-    exit;
-}
-
-// Function to generate JWT token
-function generateToken($username, $role) {
-    // You can use a JWT library to generate tokens
-    // For example, you can use Firebase JWT library: https://github.com/firebase/php-jwt
-    // Here, we'll simulate a simple token generation
-    return base64_encode($username . ':' . $role);
-}
-
-// Function to verify JWT token
-function verifyToken($token) {
-    // You can use a JWT library to verify tokens
-    // For example, you can use Firebase JWT library: https://github.com/firebase/php-jwt
-    // Here, we'll simulate a simple token verification
-    if ($token) {
-        $decoded = base64_decode($token);
-        // Check if token is valid based on your logic (e.g., check if it's not expired)
-        return true; // For simplicity, we'll return true here
-    }
-    return false;
 }
 ?>
+
 
 <!DOCTYPE html>
   <html lang="en">
