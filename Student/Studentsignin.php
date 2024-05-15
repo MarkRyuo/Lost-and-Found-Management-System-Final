@@ -59,8 +59,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Increase login attempts
             $_SESSION['login_attempts']++;
 
-            // Check if login attempts exceed the limit (e.g., 2 attempts)
-            if ($_SESSION['login_attempts'] >= 2) {
+            // Check if login attempts exceed the limit (e.g., 3 attempts)
+            if ($_SESSION['login_attempts'] >= 3) {
                 echo "<script>alert('Account is blocked due to multiple failed login attempts');</script>";
                 exit;
             }
@@ -87,6 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 ?>
+
 
 
 <!DOCTYPE html>
