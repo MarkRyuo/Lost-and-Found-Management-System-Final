@@ -77,9 +77,6 @@ function verifyToken($token) {
     return false;
 }
 ?>
-```
-
-With this completion, you now have an API for user authentication and token verification. This API can be integrated into your application to handle authentication and authorization processes securely.
 
 <!DOCTYPE html>
   <html lang="en">
