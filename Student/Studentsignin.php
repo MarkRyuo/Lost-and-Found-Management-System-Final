@@ -12,6 +12,11 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// Check if there are too many login attempts
+if (!isset($_SESSION['login_attempts'])) {
+    $_SESSION['login_attempts'] = 0;
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get input data
     $sr_code = $_POST["sr_code"];
@@ -39,16 +44,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // User exists, check password
         $row = $result->fetch_assoc();
         if ($password == $row["password"]) {
+            // Reset login attempts upon successful login
+            $_SESSION['login_attempts'] = 0;
+
             // Login successful, redirect to a new page
             header("Location: /ViewLost_Student/StudertViewLost.php"); // Replace with the correct path // Todo
             exit();
         } else {
+            // Increase login attempts
+            $_SESSION['login_attempts']++;
+
+            // Check if login attempts exceed the limit (e.g., 2 attempts)
+            if ($_SESSION['login_attempts'] >= 2) {
+                echo "<script>alert('Account is blocked due to multiple failed login attempts');</script>";
+                exit;
+            }
+
             echo "Incorrect password!";
         }
     } else {
         // User does not exist, insert new user
         $insert_user_query = "INSERT INTO student_lostNfound (Sr_code, Password) VALUES ('$sr_code', '$password')";
         if ($conn->query($insert_user_query) === TRUE) {
+            // Reset login attempts upon successful registration
+            $_SESSION['login_attempts'] = 0;
+
             header("Location: /ViewLost_Student/StudertViewLost.php"); // Replace with the correct path // Todo
             // echo "Sign up successful !";
             // Add your login logic here
@@ -60,6 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
