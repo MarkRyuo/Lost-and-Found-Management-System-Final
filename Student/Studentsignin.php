@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // Database connection
 $servername = "localhost";
 $username = "root";
@@ -37,13 +39,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Check if user exists
-    $check_user_query = "SELECT * FROM student_lostNfound WHERE Sr_code = '$sr_code'";
-    $result = $conn->query($check_user_query);
+    $check_user_query = "SELECT * FROM student_lostNfound WHERE Sr_code = ?";
+    $stmt = $conn->prepare($check_user_query);
+    $stmt->bind_param("s", $sr_code);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
         // User exists, check password
-        $row = $result->fetch_assoc();
-        if ($password == $row["password"]) {
+        $user = $result->fetch_assoc();
+        if ($password == $user["password"]) {
             // Reset login attempts upon successful login
             $_SESSION['login_attempts'] = 0;
 
@@ -64,8 +69,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     } else {
         // User does not exist, insert new user
-        $insert_user_query = "INSERT INTO student_lostNfound (Sr_code, Password) VALUES ('$sr_code', '$password')";
-        if ($conn->query($insert_user_query) === TRUE) {
+        $insert_user_query = "INSERT INTO student_lostNfound (Sr_code, Password) VALUES (?, ?)";
+        $stmt = $conn->prepare($insert_user_query);
+        $stmt->bind_param("ss", $sr_code, $password);
+        if ($stmt->execute()) {
             // Reset login attempts upon successful registration
             $_SESSION['login_attempts'] = 0;
 
