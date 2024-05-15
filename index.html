@@ -1,92 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="discription" content="This is Lost and Found Management System Website">
-        <meta name="author" content="Group 6 : 
-        Malupa, Jhon Mark 
-        De la Cruz, Leomar">
-    <link rel="stylesheet" href="/Assets/Home-Page/Home-Page.css">
-    <link rel="stylesheet" href="/Assets/css/Homepage-hover.css">
-    <link rel="icon" type="img/x-icon" href="/Assets/Images/Batstatelogo.png">
-    <link rel="stylesheet" href="/stylecursor.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is Lost and Found Management System Website">
+  <meta name="author" content="Group 6: Malupa, Jhon Mark; De la Cruz, Leomar">
+  <title>HomePage | Lost and Found Management System</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/Assets/Home-Page/Home-Page.css">
+  <link rel="stylesheet" href="/Assets/css/Homepage-hover.css">
+  <link rel="stylesheet" href="/stylecursor.css">
+  <!-- Custom Favicon -->
+  <link rel="icon" type="img/x-icon" href="/Assets/Images/Batstatelogo.png">
+</head>
+<body>
 
-    <title>HomePage|Lost and Found Management System</title>
-  </head>
-  <body>
+<div class="container">
+  <h1>Lost and Found Management System</h1>
+  <p class="con-Text"><q>Your lost items can be restored through this system</q></p>
+  <a href="/About/About.html">Learn More &raquo;</a>
+  <a href="#Sign-in" class="container-a-signin">Sign in ▼▼▼</a>
+</div>
 
-    <div class="container">
-      <h1>Lost and Found Management System</h1>
-      <p class="con-Text"><q>Your lost items can be restored through this system</q></p>
-      <a href="/About/About.html">Learn More >>></a>
-      <a href="#Sign-in" class="container-a-signin">Sign in ▼▼▼</a>
-    </div>
-    
-    <div class="blank">
-      <!-- Todo -->
-    </div>
-    
-    <div class="container second" id="Sign-in">
+<div class="blank"></div>
+
+<div class="container second" id="Sign-in">
+  <div class="row">
+    <div class="col-md-4">
       <div class="item">
         <div class="img img-first"></div>
         <div class="card">
           <h3>Student</h3>
-          <p style="font-size: 1.1rem;"><mark>Welcome</mark>!!<br> Are you a Student, Do you lose something? Sign in here</p>
-          <button id="studentSignin">Sign in</button>
+          <p class="font-size-1-1rem"><mark>Welcome</mark>!!<br> Are you a Student? Do you lose something? Sign in here</p>
+          <button id="studentSignin" class="btn btn-primary">Sign in</button>
         </div>
       </div>
+    </div>
+    <div class="col-md-4">
       <div class="item">
         <div class="img img-second"></div>
         <div class="card">
           <h3>Security</h3>
-          <p style="font-size: 1.1rem;"><mark>Good Day</mark>!! <br> Anyone missing stuff? Let's sign it! Sign in here </p>
-          <button id="securitySignin">Sign in</button>
+          <p class="font-size-1-1rem"><mark>Good Day</mark>!! <br> Anyone missing stuff? Let's sign it! Sign in here </p>
+          <button id="securitySignin" class="btn btn-primary">Sign in</button>
         </div>
       </div>
+    </div>
+    <div class="col-md-4">
       <div class="item">
         <div class="img img-third"></div>
         <div class="card">
           <h3>Welcome</h3>
-          <p style="font-size: 1.1rem;">Welcome to our Lost and Found Management System! If you lose your use? With the system you can see the missing items   </p>
+          <p class="font-size-1-1rem">Welcome to our Lost and Found Management System! If you lose your use? With the system you can see the missing items   </p>
         </div>
       </div>
     </div>
-    
-    <div class="blank footer">
-      <!-- Todo -->
-      <section class="parent-footer">
-        <div class="footer-image">
-        <img src="/Assets/Images/Batstatelogo.png" alt="Logo of BSU">
-        </div>
+  </div>
+</div>
 
-        <div class="Our-Team">
-          <h1>Our Team</h1>
-          <p> Malupa, Jhon Mark <br> 
-              De la cruz, Leomar <br>
-          </p>
-        </div>
-
-        <div class="Contact-us">
-          <h1>Contact Us</h1>
-          <div class="div-contact">
-            <img src="/Assets/Images/gmailicon.png" alt="Icon">
-            <a href="#">Lostandfound@gmail.com</a>
-          </div>
-          <div class="div-contact">
-            <img src="/Assets/Images/gmailicon.png" alt="Icon">
-            <a href="#">Lostandfound@gmail.com</a>
-          </div>
-          <div class="div-contact">
-            <img src="/Assets/Images/Contact.png" alt="">
-            <a href="#">555-555-555</a>
-          </div>
-        </div>
-      </section>
+<div class="blank footer">
+  <section class="parent-footer">
+    <div class="footer-image">
+      <img src="/Assets/Images/Batstatelogo.png" alt="Logo of BSU">
     </div>
-    
-  </body>
-  <!-- This is the connection of btn signin's -->
-  <script src="/Assets/Home-Page/Homepage-btn.js"></script>
-  <!-- End of the connection -->
+    <div class="Our-Team">
+      <h1>Our Team</h1>
+      <p> Malupa, Jhon Mark <br> De la cruz, Leomar <br></p>
+    </div>
+    <div class="Contact-us">
+      <h1>Contact Us</h1>
+      <div class="div-contact">
+        <img src="/Assets/Images/gmailicon.png" alt="Icon">
+        <a href="#">Lostandfound@gmail.com</a>
+      </div>
+      <div class="div-contact">
+        <img src="/Assets/Images/gmailicon.png" alt="Icon">
+        <a href="#">Lostandfound@gmail.com</a>
+      </div>
+      <div class="div-contact">
+        <img src="/Assets/Images/Contact.png" alt="">
+        <a href="#">555-555-555</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Bootstrap JS and jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom Script -->
+<script src="/Assets/Home-Page/Homepage-btn.js"></script>
+</body>
 </html>
